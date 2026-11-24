@@ -1,0 +1,1152 @@
+# The Human Share — data manifest (Phase 1 inventory, 2026-11-22)
+#
+# One entry per dataset. Field meanings follow PROJECT.md.
+# status: have | partial | missing | needs_human
+#
+# "Verified at source 2026-11-22" means the version or date was read on the
+# source's own page that day. The pages were read; no data files were downloaded.
+# Each local copy keeps the provenance it was recorded with when someone else
+# fetched it earlier.
+#
+# The signed_off_by and signed_off_on fields stay blank until a person fills them in.
+#
+# Cluster = Northeastern Explorer, /projects/aiskunks. The brief says "Discovery";
+# Explorer is the current cluster.
+
+# ─────────────────────────────── A. O*NET ───────────────────────────────
+
+- dataset_id: onet_31_0_full_text
+  name: "O*NET 31.0 Database, all 46 text files (umbrella entry for the per-file entries below)"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_text.zip"
+  license: "CC BY 4.0 (O*NET licence page)"
+  version: "31.0, August 2026; the current production release (verified at source 2026-11-22 and again 2026-11-23: onetcenter.org/db_releases.html says 'The current production release of the O*NET database is 31.0')"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/ (zip sha256 6883548adf5fde64cf6f801b35d15519c9225f2732c3cab0e281c652d16b23a9); Mac subset of 13 files at /Users/bear/Documents/CoWork/bear-textbooks/books/a-new-shape-for-work/source/onet-31.0/ (gitignored)"
+  occupation_code_system: "O*NET-SOC 2019"
+  unit_of_analysis: "occupation (descriptor ratings), task, DWA"
+  coverage: "Occupation Data 1,016 rows; Job Zones 923 rows (verified at source)"
+  used_for: [RQ1, RQ2, RQ3, RQ4]
+  notes: "Release 30.3 (May 2026) renamed and split files. Skills is now Essential Skills plus Transferable Skills. IWA Reference is now 'GWAs to IWAs', and DWA Reference is now 'GWAs to IWAs to DWAs'. 'Tools Used' and 'Work Values' are no longer included. Migration reference: https://www.onetcenter.org/dl_files/30_3_migration_reference.xlsx (not opened). PINNED: Bear chose 'Pin 31.0' in chat on 2026-11-23 (decision 7). This is the project's reference O*NET release, and the 30.3 renames are accepted. If 31.1 or a later release comes out, the project stays on 31.0 unless a person decides again."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_abilities
+  name: "O*NET Abilities"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/Abilities.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0 (August 2026)"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/Abilities.txt"
+  occupation_code_system: "O*NET-SOC 2019"
+  unit_of_analysis: "occupation"
+  coverage: "94,640 rows (verified at source); 52 abilities"
+  used_for: [RQ1]
+  notes: "Also linked in 31.0: 'Abilities to Work Activities' and 'Abilities to Work Context'."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_essential_skills
+  name: "O*NET Essential Skills (part of what was 'Skills' before 30.3)"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/Essential%20Skills.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0; file added in 30.3"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/Essential Skills.txt"
+  occupation_code_system: "O*NET-SOC 2019"
+  unit_of_analysis: "occupation"
+  coverage: "18,200 rows (verified at source)"
+  used_for: [RQ1]
+  notes: "The brief asks for 'Skills'. In 31.0, Skills.xlsx returns 404, so use this file and Transferable Skills. The pre-split Skills file exists in 30.2: explorer:/projects/aiskunks/onet/30.2/db_30_2_text/."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_transferable_skills
+  name: "O*NET Transferable Skills (part of what was 'Skills' before 30.3)"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/Transferable%20Skills.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0; file added in 30.3"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/Transferable Skills.txt"
+  occupation_code_system: "O*NET-SOC 2019"
+  unit_of_analysis: "occupation"
+  coverage: "45,500 rows (verified at source)"
+  used_for: [RQ1]
+  notes: ""
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_knowledge
+  name: "O*NET Knowledge"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/Knowledge.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/Knowledge.txt"
+  occupation_code_system: "O*NET-SOC 2019"
+  unit_of_analysis: "occupation"
+  coverage: "60,060 rows (verified at source)"
+  used_for: [RQ1]
+  notes: ""
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_work_activities
+  name: "O*NET Work Activities (GWA ratings)"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/Work%20Activities.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/Work Activities.txt; also /Users/bear/Documents/CoWork/bear-textbooks/books/a-new-shape-for-work/source/onet-31.0/Work Activities.txt"
+  occupation_code_system: "O*NET-SOC 2019"
+  unit_of_analysis: "occupation"
+  coverage: "74,702 rows (verified at source)"
+  used_for: [RQ1, RQ4]
+  notes: ""
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_iwas
+  name: "O*NET Intermediate Work Activities ('GWAs to IWAs'; was 'IWA Reference')"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/GWAs%20to%20IWAs.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0; renamed in 30.3"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/GWAs to IWAs.txt; Mac copy in a-new-shape-for-work/source/onet-31.0/"
+  occupation_code_system: "n/a (activity taxonomy)"
+  unit_of_analysis: "IWA"
+  coverage: "332 rows (verified at source)"
+  used_for: [RQ1, RQ3, RQ4]
+  notes: "Draft phase tags (machine and rule made, unreviewed) exist for all 332 IWAs: /Users/bear/Documents/CoWork/bear-textbooks/books/a-new-shape-for-work/tags/iwa-phase-tags.tsv"
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_dwas
+  name: "O*NET Detailed Work Activities ('GWAs to IWAs to DWAs'; was 'DWA Reference')"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/GWAs%20to%20IWAs%20to%20DWAs.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0; renamed in 30.3"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/GWAs to IWAs to DWAs.txt; Mac copy in a-new-shape-for-work/source/onet-31.0/"
+  occupation_code_system: "n/a (activity taxonomy)"
+  unit_of_analysis: "DWA"
+  coverage: "2,087 rows (verified at source)"
+  used_for: [RQ1, RQ3, RQ4]
+  notes: "Draft phase tags for all 2,087 DWAs (unreviewed): a-new-shape-for-work/tags/dwa-phase-tags.tsv. On a 175-DWA pilot, Claude agreed with the rule draft on 73% (kappa 0.66)."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_task_statements
+  name: "O*NET Task Statements"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/Task%20Statements.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/Task Statements.txt; /Users/bear/Documents/CoWork/bear-textbooks/books/a-new-shape-for-work/source/onet-31.0/Task Statements.txt"
+  occupation_code_system: "O*NET-SOC 2019"
+  unit_of_analysis: "task"
+  coverage: "18,838 rows (verified at source)"
+  used_for: [RQ3, RQ4, RQ5]
+  notes: "Task Ratings.txt and Emerging Tasks.txt are also held. The AEI task_penetration file matches 18,680 of these statements by lower-cased text."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_tasks_to_dwas
+  name: "O*NET Tasks to DWAs"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/Tasks%20to%20DWAs.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0; columns renamed in 30.3 to 'DWA Element ID' and 'DWA Element Name'"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/Tasks to DWAs.txt; Mac copy in a-new-shape-for-work/source/onet-31.0/"
+  occupation_code_system: "O*NET-SOC 2019"
+  unit_of_analysis: "task"
+  coverage: "24,087 rows (verified at source)"
+  used_for: [RQ3, RQ4]
+  notes: "Code written for 30.2 or earlier will break on the renamed columns."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_work_context
+  name: "O*NET Work Context"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/Work%20Context.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/Work Context.txt"
+  occupation_code_system: "O*NET-SOC 2019"
+  unit_of_analysis: "occupation"
+  coverage: "305,389 rows (verified at source)"
+  used_for: [RQ1]
+  notes: "The Explorer paper draft notes that Work Context items (e.g. Consequence of Error) separated one occupation pair where Skills did not."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_work_styles
+  name: "O*NET Work Styles"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/Work%20Styles.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0. The content was last updated in 30.1 (December 2025): new taxonomy, new WI and DR scales, and uncertainty columns removed."
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/Work Styles.txt"
+  occupation_code_system: "O*NET-SOC 2019"
+  unit_of_analysis: "occupation"
+  coverage: "37,422 rows (verified at source); 891 occupations updated in 30.1"
+  used_for: [RQ1]
+  notes: "O*NET says the 30.1 Work Styles data was made by 'a new hybrid artificial intelligence-expert method'. That makes it partly AI-generated, which matters for RQ1's argument about machine labels. The 30.2 copy on the cluster comes after 30.1, so it has the new taxonomy too. Pre-30.1 Work Styles files are in the O*NET archive and are not held. Accepted under decision 7 (31.0 pinned, 2026-11-23). Wherever Work Styles is used, the paper flags it as partly machine-made."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_occupation_data
+  name: "O*NET Occupation Data"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/Occupation%20Data.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/Occupation Data.txt; Mac copy in a-new-shape-for-work/source/onet-31.0/"
+  occupation_code_system: "O*NET-SOC 2019"
+  unit_of_analysis: "occupation"
+  coverage: "1,016 rows (verified at source)"
+  used_for: [RQ1, RQ2, RQ3, RQ4, RQ5]
+  notes: ""
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_job_zones
+  name: "O*NET Job Zones"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/Job%20Zones.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/Job Zones.txt; Mac copy in a-new-shape-for-work/source/onet-31.0/"
+  occupation_code_system: "O*NET-SOC 2019"
+  unit_of_analysis: "occupation"
+  coverage: "923 rows (verified at source)"
+  used_for: [RQ2]
+  notes: "The nearest O*NET proxy for seniority; it is a zone per occupation, not a level per posting."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_content_model_reference
+  name: "O*NET Content Model Reference"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_31_0_excel/Content%20Model%20Reference.xlsx"
+  license: "CC BY 4.0"
+  version: "31.0; IWAs, DWAs and software categories added in 30.3"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/31.0/db_31_0_text/Content Model Reference.txt; Mac copy in a-new-shape-for-work/source/onet-31.0/"
+  occupation_code_system: "n/a"
+  unit_of_analysis: "descriptor"
+  coverage: "3,006 rows (verified at source)"
+  used_for: [RQ1]
+  notes: ""
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_30_2_full_text
+  name: "O*NET 30.2 Database, text (the previous file layout, before the 30.3 renames)"
+  group: A
+  status: have
+  source_url: "https://www.onetcenter.org/dl_files/database/db_30_2_text.zip"
+  license: "CC BY 4.0"
+  version: "30.2"
+  retrieved_on: "2026-10-31"
+  local_path: "explorer:/projects/aiskunks/onet/30.2/db_30_2_text/ (zip sha256 b5479271931796b838f7173dc0f673a9ec961b7833ac87168fd11e92e7453741)"
+  occupation_code_system: "O*NET-SOC 2019"
+  unit_of_analysis: "occupation, task, DWA"
+  coverage: "full release"
+  used_for: [RQ1, RQ5]
+  notes: "Useful as a bridge for code written against the old file names. Under decision 7 (31.0 pinned, 2026-11-23), 30.2 is kept only as a bridge. The AEI 2026-06-26 DWA and IWA IDs are 30.2 IDs, and all 750 DWA names match 31.0, so Phase 3 maps them to 31.0 by name."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: explorer_neon_onet_bls
+  name: "AI Exposure Explorer database (O*NET tables plus BLS employment)"
+  group: A
+  status: needs_human
+  source_url: "https://www.irreducibly.xyz/onet"
+  license: "O*NET CC BY 4.0; BLS public domain"
+  version: "not found. The import script reads 'Skills.xlsx', 'Technology Skills.xlsx' and 'Work Values.xlsx', which no longer exist in 31.0, so the load predates 30.3."
+  retrieved_on: "not found"
+  local_path: "Neon Postgres (13 onet_* tables, bls_employment). Code: /Users/bear/Documents/CoWork/bear-textbooks/books/Irreducibly-Human/scripts/import-onet.mjs and import-bls.mjs. The raw-file folders (ONET_DIR, BLS_DIR) were not found on this Mac."
+  occupation_code_system: "O*NET-SOC (full code) plus SOC suffix bridge to BLS"
+  unit_of_analysis: "occupation"
+  coverage: "BLS OEWS national 1999–2024, with 2009 missing (per the import script)"
+  used_for: [RQ1]
+  notes: "I didn't query the database: that needs credentials I wasn't given (rule 3). The Explorer's production code is not to be touched (rule 8). The release in the database can be confirmed by someone who holds the connection string."
+  signed_off_by: ""
+  signed_off_on: ""
+
+# ─────────────────────────────── B. BLS ───────────────────────────────
+
+- dataset_id: bls_oews_national_may2024
+  name: "BLS OEWS national, May 2024"
+  group: B
+  status: partial
+  source_url: "https://www.bls.gov/oes/special-requests/oesm24nat.zip"
+  license: "US government work (public domain)"
+  version: "May 2024. Not current: May 2025 was released 2026-05-15 (verified at source)."
+  retrieved_on: "not recorded (file dated 2026-08-17)"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/the-reallocation-engine-fresh/data/bls/oesm24nat/national_M2024_dl.xlsx"
+  occupation_code_system: "SOC 2018"
+  unit_of_analysis: "occupation"
+  coverage: "1,403 data rows (sheet dimension A1:AF1404)"
+  used_for: [RQ1]
+  notes: "The Explorer database holds 1999–2024. bls.gov returns 403 to scripted requests, so the May 2025 files (oesm25nat.zip, oesm25all.zip) need a browser download by a person."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: bls_oews_may2025
+  name: "BLS OEWS, May 2025 (current)"
+  group: B
+  status: needs_human
+  source_url: "https://www.bls.gov/oes/tables.htm (oesm25nat.zip, oesm25all.zip)"
+  license: "US government work (public domain)"
+  version: "May 2025, released 2026-05-15 (verified at source)"
+  retrieved_on: ""
+  local_path: "not found"
+  occupation_code_system: "SOC 2018 (per the OEWS technical notes)"
+  unit_of_analysis: "occupation"
+  coverage: "about 830 occupations"
+  used_for: [RQ1]
+  notes: "bls.gov blocks scripted fetches. A person must download it in a browser."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: bls_employment_projections
+  name: "BLS Employment Projections, 2025–35"
+  group: B
+  status: needs_human
+  source_url: "https://www.bls.gov/emp/tables.htm"
+  license: "US government work (public domain)"
+  version: "2025–2035, released 2026-08-27 (verified at source)"
+  retrieved_on: ""
+  local_path: "not found (an older projections file is bundled in the Eloundou repo: occupations_projections_processed.csv, vintage not stated)"
+  occupation_code_system: "SOC 2018 (National Employment Matrix)"
+  unit_of_analysis: "occupation"
+  coverage: ""
+  used_for: [RQ1]
+  notes: "Browser download needed. Table 1.12 (reasons for projected change, including AI) is listed in /Users/bear/Documents/CoWork/bear-textbooks/books/ai-exposure/sources.json."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: bls_ai_exposure_categories
+  name: "BLS AI exposure categories (Employment Projections)"
+  group: B
+  status: have
+  source_url: "https://www.bls.gov/emp/ind-occ-matrix/ai-exposure-categories.xlsx"
+  license: "US government work (public domain)"
+  version: "released 2026-08-27 (per the ai-exposure sources.json)"
+  retrieved_on: "2026-11-07"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/ai-jobs/data/ai-exposure/bls/2026-11-07/ (xlsx + csv + manifest with sha256)"
+  occupation_code_system: "SOC 2018 (NEM)"
+  unit_of_analysis: "occupation"
+  coverage: "831 occupations; categories Very high 206, High 206, Moderate 206, Low 213; no per-source scores"
+  used_for: [RQ1]
+  notes: "A composite category, not an index. Downloaded by Bear through a browser."
+  signed_off_by: ""
+  signed_off_on: ""
+
+# ─────────────────────────── C. AI exposure indices ───────────────────────────
+
+- dataset_id: yale_budget_lab_exposure
+  name: "Yale Budget Lab, 'Labor Market AI Exposure: What Do We Know?' data file"
+  group: C
+  status: have
+  source_url: "https://budgetlab.yale.edu/sites/default/files/2026-02/TBL-Data-AI-Exposure-What-do-we-know-202602-Updated.xlsx"
+  license: "not stated on the page or in the workbook; do not redistribute until decided"
+  version: "page dated 2026-02-19; file Last-Modified 2026-02-23 15:31:01 GMT"
+  retrieved_on: "2026-11-23"
+  local_path: "/Users/bear/Documents/CoWork/the-human-share/data/raw/yale-budget-lab-exposure/2026-11-23/ (sha256 d08fb1729a3d921bc671c75284655330be89e92f8d24176ae1b5e144e9a5c7d7; SOURCE.txt; gitignored)"
+  occupation_code_system: "SOC 2018 (also CPS codes in the 'Alt' sheets)"
+  unit_of_analysis: "occupation"
+  coverage: "778 occupations, no blanks, in sheets F1, FA4 and FA5. These are z-scores for six measures (AIOE, Eloundou GPT-4 beta, Eloundou human beta, Eisfeldt total, Eisfeldt core, Tomlinson applicability) plus the PCA score and the cross-measure z-score variance."
+  used_for: [RQ1]
+  notes: "Opened 2026-11-23. It is a figures-and-tables workbook (15 sheets), not a raw data panel. Webb pct_ai has no per-occupation scores; it appears only in the definitions table and the PCA weights (0.047). The 867- and 710-occupation sets the page describes are not in the file, and it holds z-scores, not the original scales. No AEI measure. Approved by Bear in chat on 2026-11-23 ('Approve small ones')."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: felten_aioe
+  name: "Felten, Raj & Seamans AIOE (with Language Modeling and Image Generation variants)"
+  group: C
+  status: have
+  source_url: "https://github.com/AIOE-Data/AIOE"
+  license: "none (no LICENSE file; GitHub reports license null; the README asks for a citation of SMJ 42(12):2195–2217)"
+  version: "repo commit adca5fc, 2024-06-03 (same as upstream, verified 2026-11-22); last data upload 2023-05-03"
+  retrieved_on: "2026-08-10 (clone date)"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-irreducibly-human/AIOE/ (git clone); another copy of the appendix in /Users/bear/Documents/Codex/2026-10-24/task/explorer-audit/"
+  occupation_code_system: "six-digit SOC; vintage not stated by the repo (Yale says SOC 2010)"
+  unit_of_analysis: "occupation (also industry, county, and an ability-level appendix)"
+  coverage: "Appendix A: 774 data rows (sheet A1:C775)"
+  used_for: [RQ1]
+  notes: "Built on O*NET abilities, so it is the clearest case of RQ1's inherited blind spot. Without a licence, redistribution needs a human decision."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: eloundou_gpts_are_gpts
+  name: "Eloundou et al., 'GPTs are GPTs' task and occupation labels"
+  group: C
+  status: have
+  source_url: "https://github.com/openai/GPTs-are-GPTs"
+  license: "MIT (Copyright 2024 OpenAI)"
+  version: "upstream last commit 2025-10-04, which added occ_level.csv (verified 2026-11-22). The local copy has no .git; occ_level.csv is dated 2026-10-10, so it is from after that commit."
+  retrieved_on: "about 2026-10-10 (file date; not recorded)"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/openai/GPTs-are-GPTs/"
+  occupation_code_system: "O*NET-SOC (vintage not stated in the repo; Yale calls it SOC 2019)"
+  unit_of_analysis: "task (full_labelset.tsv) and occupation (occ_level.csv)"
+  coverage: "full_labelset.tsv 19,265 task rows; occ_level.csv 923 occupations (dv and human ratings, alpha, beta, gamma)"
+  used_for: [RQ1, RQ3]
+  notes: "The only exposure source here at task level. The repo also bundles an older nem-onet-to-soc-crosswalk.xlsx and BLS files."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: eisfeldt_genai_exposure
+  name: "Eisfeldt et al. (2023) generative-AI exposure"
+  group: C
+  status: partial
+  source_url: "https://sites.google.com/view/gregorschubert/data"
+  license: "not found"
+  version: "not found"
+  retrieved_on: "2026-11-23 (z-scores only, inside the Yale file)"
+  local_path: "inside /Users/bear/Documents/CoWork/the-human-share/data/raw/yale-budget-lab-exposure/2026-11-23/ (sheets FA4 and FA5, columns 'GenAI Total' and 'GenAI Core'); the original authors' file is not held"
+  occupation_code_system: "SOC 2018 in the Yale file (crosswalked by Yale from SOC 2010)"
+  unit_of_analysis: "occupation"
+  coverage: "778 occupations (z-scores)"
+  used_for: [RQ1]
+  notes: "Enough for a cross-index comparison. The original scale and task-level data would need the authors' release."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: webb_patents
+  name: "Webb (2020) AI patent exposure (pct_ai)"
+  group: C
+  status: missing
+  source_url: "https://web.stanford.edu/~mww/webb_jmp.pdf"
+  license: "not found"
+  version: "2020"
+  retrieved_on: ""
+  local_path: "not found"
+  occupation_code_system: "occ1990dd, crosswalked by Yale to SOC 2018"
+  unit_of_analysis: "occupation"
+  coverage: ""
+  used_for: [RQ1]
+  notes: "NOT covered by the Yale file after all. Opened 2026-11-23: pct_ai appears only in its definitions table and PCA weights (0.047), with no per-occupation values. The Yale page dropped Webb from later tests. Per-occupation Webb scores would need the author's own data, not found."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: microsoft_ai_applicability
+  name: "Tomlinson et al. (2025, Microsoft) 'Working with AI' applicability scores"
+  group: C
+  status: have
+  source_url: "https://github.com/microsoft/working-with-ai"
+  license: "CC BY 4.0 (LICENSE.txt; GitHub shows 'Other')"
+  version: "v1.1, commit 550c00c9d1b054ac78b87da3a26165bace334779 (2026-10-23)"
+  retrieved_on: "2026-11-23"
+  local_path: "/Users/bear/Documents/CoWork/the-human-share/data/raw/microsoft-working-with-ai/2026-11-23/ (7 CSVs plus LICENSE, NOTICE and README; per-file sha256 in SOURCE.txt; gitignored)"
+  occupation_code_system: "SOC 2018 (detailed)"
+  unit_of_analysis: "IWA (iwa_metrics.csv) and occupation (ai_applicability_scores.csv, soc_metrics.csv)"
+  coverage: "785 SOC codes; 332 IWAs; 13,698 SOC-to-IWA links; 18,796 tasks flagged physical or not. Built from O*NET 29.0 and Bing Copilot conversations 2024-01-01 to 2024-09-30."
+  used_for: [RQ1, RQ5]
+  notes: "About 3.2 MB in total; the 2026-11-22 report's 'under 1 MB' was wrong. iwa_metrics splits user-side and AI-side shares, completion and scope per IWA, which is usage data for RQ5 at the same IWA level as O*NET. The README misnames one file (soc_iwa_weights_nonphysical.csv; the actual file is soc_iwa_nonphysical_weights.csv). Approved by Bear in chat on 2026-11-23 ('Approve small ones')."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: daioe_dynamic_aioe
+  name: "Dynamic AIOE (DAIOE), Engberg et al., IZA DP 16717"
+  group: C
+  status: needs_human
+  source_url: "https://sites.google.com/view/ai-econlab/ai-exposure-daioe (Google Drive folder 'AI_Unboxed')"
+  license: "none stated"
+  version: "appendix dated July 2025; coverage 2010 to 2023"
+  retrieved_on: ""
+  local_path: "not found"
+  occupation_code_system: "ISCO-08, O*NET-SOC 2010, SOC 2010, SSYK 2012, SSYK 96 (separate subfolders)"
+  unit_of_analysis: "occupation by year"
+  coverage: "11 indices (overall, nine subdomains, genAI) plus percentile ranks"
+  used_for: [RQ1]
+  notes: "Distributed through Google Drive with no licence stated. A person should decide whether to use it."
+  signed_off_by: ""
+  signed_off_on: ""
+
+# ─────────────────────────── D. Observed AI usage ───────────────────────────
+
+- dataset_id: aei_labor_market_impacts_task_penetration
+  name: "Anthropic Economic Index, labor_market_impacts/task_penetration.csv"
+  group: D
+  status: partial
+  source_url: "https://huggingface.co/datasets/Anthropic/EconomicIndex/resolve/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/labor_market_impacts/task_penetration.csv"
+  license: "CC BY (data), MIT (code), per the dataset README. The card metadata says 'mit'; the documentation says CC BY 4.0."
+  version: "dataset commit 4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6; folder dated 2026-03-05"
+  retrieved_on: "2026-11-21"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/a-new-shape-for-work/source/anthropic-economic-index/labor-market-impacts/task_penetration.csv (sha256 85bee872db1d55d3e9a7f4e89da5ae4a5d59aa8ec875d728fbf4b7d820984616)"
+  occupation_code_system: "none: tasks keyed by statement text (matches 18,680 of 18,838 O*NET 31.0 tasks)"
+  unit_of_analysis: "task"
+  coverage: "17,998 rows; 1,354 above 0"
+  used_for: [RQ5]
+  notes: "Penetration only. There are no automation or augmentation fields, so it cannot answer RQ5's automation-versus-augmentation question on its own. job_exposure.csv in the same folder is not held."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: aei_release_2025_02_10
+  name: "Anthropic Economic Index release 2025-02-10"
+  group: D
+  status: missing
+  source_url: "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_2025_02_10"
+  license: "CC BY (data)"
+  version: "2025-02-10"
+  retrieved_on: ""
+  local_path: "not found"
+  occupation_code_system: "task text plus SOC_Structure.csv"
+  unit_of_analysis: "task"
+  coverage: "onet_task_mappings.csv (task_name, pct); automation_vs_augmentation.csv is aggregate only"
+  used_for: [RQ5]
+  notes: "Small files."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: aei_release_2025_03_27
+  name: "Anthropic Economic Index release 2025-03-27 (Claude 3.7 Sonnet)"
+  group: D
+  status: have
+  source_url: "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2025_03_27"
+  license: "CC BY (data), MIT (code), per the dataset README; card metadata says 'mit'"
+  version: "2025-03-27 (Claude 3.7 Sonnet); dataset commit 4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6"
+  retrieved_on: "2026-11-23"
+  local_path: "/Users/bear/Documents/CoWork/the-human-share/data/raw/aei-release-2025-03-27/2026-11-23/ (11 files, 6.5 MB; sha256 per file in SOURCE.txt)"
+  occupation_code_system: "task text (lower-cased, no code); the release's onet_task_statements.csv uses O*NET-SOC 2010 codes (974 codes, task dates to 2015; the release names no O*NET version)"
+  unit_of_analysis: "task; usage cluster"
+  coverage: "automation_vs_augmentation_by_task.csv 3,364 tasks (directive, feedback_loop, task_iteration, validation, learning, filtered); task_pct_v2 3,365; task_thinking_fractions 3,365; cluster_level_dataset.tsv 630 clusters; onet_task_statements 19,530"
+  used_for: [RQ5]
+  notes: "Downloaded 2026-11-23 after Bear chose 'Latest + 2025-03-27' (decision 2). The CSV/TSV data and READMEs were fetched; the PNG figures and notebooks were not. Every file's size and git blob hash match the Hugging Face tree. 2,798 of 3,364 task names match O*NET 31.0 task text exactly; the other 566 need the release's own 2010 codes plus the 2010-to-2019 crosswalk. It is per-task collaboration patterns only, with no automation/augmentation bucket field: directive and feedback_loop are the automation patterns, the other three augmentation, per the release."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: aei_release_2025_09_15
+  name: "Anthropic Economic Index release 2025-09-15 (Aug 4–11, 2025 sample)"
+  group: D
+  status: missing
+  source_url: "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_2025_09_15"
+  license: "CC BY (data)"
+  version: "2025-09-15"
+  retrieved_on: ""
+  local_path: "not found"
+  occupation_code_system: "task statements from O*NET 20.1 per its documentation (probably O*NET-SOC 2010; needs the file opened)"
+  unit_of_analysis: "task (long format: onet_task, onet_task::collaboration)"
+  coverage: "about 53 MB across raw and enriched files"
+  used_for: [RQ5]
+  notes: "The O*NET vintage differs from 31.0. Joining needs a task-text or 2010-to-2019 crosswalk."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: aei_release_2026_01_15
+  name: "Anthropic Economic Index release 2026-01-15 (Nov 13–20, 2025 sample)"
+  group: D
+  status: missing
+  source_url: "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_2026_01_15"
+  license: "CC BY (data)"
+  version: "2026-01-15"
+  retrieved_on: ""
+  local_path: "not found"
+  occupation_code_system: "task (same schema as 2025-09-15)"
+  unit_of_analysis: "task"
+  coverage: "about 136 MB; adds task_success, ai_autonomy, human_only_time, use_case"
+  used_for: [RQ5]
+  notes: ""
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: aei_release_2026_03_24
+  name: "Anthropic Economic Index release 2026-03-24 (Feb 5–12, 2026 sample)"
+  group: D
+  status: missing
+  source_url: "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_2026_03_24"
+  license: "CC BY (data)"
+  version: "2026-03-24 (claude_ai file re-committed 2026-05-21)"
+  retrieved_on: ""
+  local_path: "not found"
+  occupation_code_system: "task"
+  unit_of_analysis: "task"
+  coverage: "about 147 MB"
+  used_for: [RQ5]
+  notes: ""
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: aei_release_2026_06_26
+  name: "Anthropic Economic Index release 2026-06-26 (April–May 2026; new schema)"
+  group: D
+  status: have
+  source_url: "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6/release_2026_06_26"
+  license: "CC-BY per data_documentation.md (no version stated; 'CC BY 4.0' was written here before and was not what the file says); card metadata says 'mit'"
+  version: "2026-06-26 ('Cadences'; April and May 2026, latest dated release); dataset commit 4e5f69fab13a9c3f7d0dcc31a6f893a9818738f6"
+  retrieved_on: "2026-11-23"
+  local_path: "explorer:/projects/aiskunks/the-human-share/raw/aei-release-2026-06-26/2026-11-23/ (2 CSVs, 296,457,148 bytes, plus data_documentation.md; sha256 in README.txt and SHA256SUMS there). Mac pointer and documentation copy: /Users/bear/Documents/CoWork/the-human-share/data/raw/aei-release-2026-06-26/2026-11-23/"
+  occupation_code_system: "onet: Task IDs (O*NET 31.0: 2,820 of 2,823) and DWA/IWA/GWA element IDs in the O*NET 30.2 format (all match 30.2, none match 31.0's renumbered IDs; all DWA names match 31.0); soc_occupation: O*NET-SOC codes (718 of 718 in O*NET 31.0)"
+  unit_of_analysis: "long format: period x geography x category node x metric; nodes are task, DWA, IWA, GWA, request topic, occupation"
+  coverage: "aei_claude_ai 1,636,573 rows (chat and Cowork; global, country, subregion); aei_1p_api 491,705 rows (global). 53 metric ids. GLOBAL claude_ai nodes with collaboration_bucket_automation_pct: 2,797 tasks, 745 DWAs, 210 IWAs, 35 GWAs, 716 occupations."
+  used_for: [RQ5]
+  notes: "Fetched 2026-11-23 by Slurm job 12089073 after Bear chose 'Latest + 2025-03-27' (decision 2). Sizes and sha256 match Hugging Face's LFS oids. Neither file covers Claude Code, so coding work is under-represented for software jobs. To join DWAs/IWAs to O*NET 31.0, go by name or through 30.2 (explorer:/projects/aiskunks/onet/30.2)."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: aei_robot_exposure
+  name: "Anthropic Economic Index robot_exposure (2026-09-30)"
+  group: D
+  status: missing
+  source_url: "https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/robot_exposure"
+  license: "CC BY 4.0"
+  version: "2026-09-30"
+  retrieved_on: ""
+  local_path: "not found"
+  occupation_code_system: "O*NET-SOC 2019 (O*NET 29.3 tasks)"
+  unit_of_analysis: "task, occupation"
+  coverage: "robot_exposure_tasks.csv about 100 MB; robot_exposure_occupations.csv 48 KB"
+  used_for: [RQ1]
+  notes: "Not in the brief, but it bears on the Embodied & Sensorimotor facet. No collaboration fields."
+  signed_off_by: ""
+  signed_off_on: ""
+
+# ─────────────────────────────── E. Job listings ───────────────────────────────
+
+- dataset_id: ai_jobs_open_postings_daily
+  name: "ai-jobs collector, daily open postings (Hetzner box, mirrored to the Mac)"
+  group: E
+  status: have
+  source_url: "public applicant-tracking-system job-board feeds (Greenhouse, Lever, Ashby, SmartRecruiters, Recruitee); code at https://github.com/nikbearbrown/ai-jobs"
+  license: "facts only: company, title, location, link, dates. Bear's ruling 2026-11-11: these are publishable facts."
+  version: "daily since 2026-10-24"
+  retrieved_on: "Mac mirror: 2026-11-11 and 2026-11-12"
+  local_path: "/Users/bear/Documents/CoWork/job-snapshots/open-postings-2026-11-12.jsonl (85,017 lines); explorer:/projects/aiskunks/jobs/data-sets/ai-jobs-feed/ (2026-10-24 run, 84,282 postings, sha256 in SOURCE.md); the box keeps each day"
+  occupation_code_system: "none (titles only); /Users/bear/Documents/CoWork/jobs-data maps titles to SOC 2018 broad groups"
+  unit_of_analysis: "listing"
+  coverage: "about 85,000 open postings a day from about 715 boards. Fields: company, country_codes, department, employment_type, first_seen, id, locations, posted_at, title, url, workplace. No description text, no years of experience."
+  used_for: [RQ2, RQ4]
+  notes: "Seniority comes from the title only. The source is skewed toward tech companies on hosted ATSs; Workday-class employers are missing, and one employer (Domino's) was about 29% of the 2026-10-24 run."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: ats_descriptions_2026_11_11
+  name: "Job-description snapshot 2026-11-11 (full ad text from the same boards)"
+  group: E
+  status: have
+  source_url: "the same public ATS feeds as ai_jobs_open_postings_daily"
+  license: "The ad text is the employer's writing: usable for analysis, not for republishing (see the ai-jobs-feed SOURCE.md terms)."
+  version: "snapshot finished 2026-11-12T02:42Z"
+  retrieved_on: "2026-11-11/12"
+  local_path: "/Users/bear/Documents/CoWork/job-snapshots/descriptions-2026-11-11/ (714 board files, MANIFEST.json, 58 MB)"
+  occupation_code_system: "none (joined to titles by id)"
+  unit_of_analysis: "listing"
+  coverage: "85,002 postings in the snapshot: 53,331 live with text, 739 gone, 30,931 not requested. One day only."
+  used_for: [RQ2, RQ3]
+  notes: "Used by the facets listings pilot: 12 postings hand-coded by Claude, plus a cue screen over 50,658 postings (/Users/bear/Documents/CoWork/irreducibly-human-facets/listings-pilot). Those codes are machine labels (rule 6). The 'years of experience' field must be parsed from text."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: lectern_runs
+  name: "Lectern job-board collector runs (education, advocacy, consulting and fellowship roles)"
+  group: E
+  status: partial
+  source_url: "18+ public company boards on Greenhouse, Ashby and SmartRecruiters (lectern/config)"
+  license: "facts plus ad text from public boards; same terms note as above"
+  version: "9 dated runs, 2026-10-08 to 2026-11-05"
+  retrieved_on: "2026-10-08 to 2026-11-05"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-computational-skepticism-for-ai/fall-2026/nik-bear-brown/lectern/runs/ (293 MB, gitignored raw)"
+  occupation_code_system: "none"
+  unit_of_analysis: "listing"
+  coverage: "narrow: education and advocate roles, consulting firms, fellowships"
+  used_for: [RQ2]
+  notes: "Small and purpose-built. Fields were not inspected in this pass. Most useful as a seniority check within a few role families."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: reallocation_engine_listings
+  name: "Reallocation Engine stored listings"
+  group: E
+  status: missing
+  source_url: ""
+  license: ""
+  version: ""
+  retrieved_on: ""
+  local_path: "not found. /Users/bear/Documents/CoWork/bear-textbooks/books/the-reallocation-engine-fresh/data/ holds ats/portals.example.yml, bls/, sec/ and 80-days-to-stay/, but no posting store."
+  occupation_code_system: ""
+  unit_of_analysis: "listing"
+  coverage: ""
+  used_for: [RQ2]
+  notes: "The engine reads ATS boards at run time; no listings are kept."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: kaggle_linkedin_2024_asaniczka
+  name: "'1.3M LinkedIn Jobs & Skills (2024)', asaniczka, Kaggle"
+  group: E
+  status: have
+  source_url: "https://www.kaggle.com/datasets/asaniczka/1-3m-linkedin-jobs-and-skills-2024"
+  license: "ODC-By (Kaggle listing)"
+  version: "v2"
+  retrieved_on: "2026-11-01 (transferred to the cluster)"
+  local_path: "explorer:/projects/aiskunks/kaggle/jobs/kaggle-data/asaniczka/1-3m-linkedin-jobs-and-skills-2024/v2/dataset.zip (2.0 GB)"
+  occupation_code_system: "none; a-new-shape-for-work maps titles to O*NET-SOC 2019 (35% of 1,149,342 US postings assigned)"
+  unit_of_analysis: "listing"
+  coverage: "1,149,342 US postings in 2024 (exact date range not checked); job_level, job_summary text and job_skills"
+  used_for: [RQ2, RQ3, RQ4]
+  notes: "The only large posting set here with a seniority field and US breadth. It was scraped from LinkedIn by a third party. The brief forbids scraping LinkedIn (rule 3). USE LIMIT, decided by Bear in chat on 2026-11-23 (decision 3, option b): aggregate counts only, never quoting posting text. Derived aggregates already exist: explorer:/projects/aiskunks/skills-lexicon-work/a-new-shape-for-work/out-by-occupation/."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: kaggle_jobs_archive
+  name: "Kaggle job-posting datasets archive (all matches of a jobs search)"
+  group: E
+  status: partial
+  source_url: "https://www.kaggle.com/datasets (per-dataset URL, licence and version in manifests/jobs-2026-11-01/manifest.json)"
+  license: "varies by dataset. The allow-list (21 datasets) is CC0, Apache 2.0, MIT, ODC-By and CC BY 4.0: /Users/bear/Documents/CoWork/bear-textbooks/books/irreducibly-human-work-lexicon-replication/replication/kaggle-allowlist.tsv"
+  version: "as downloaded"
+  retrieved_on: "2026-11-01 onward (batches)"
+  local_path: "explorer:/projects/aiskunks/kaggle/jobs/ (152 GB; 2,313 owner folders; archives not extracted)"
+  occupation_code_system: "varies"
+  unit_of_analysis: "listing"
+  coverage: "Mixed countries and years. A field survey of 10,610 archive members is at explorer:/projects/aiskunks/skills-lexicon-work/job-fields-survey-20261106/."
+  used_for: [RQ2, RQ3]
+  notes: "Three allow-listed sets are LinkedIn or Indeed scrapes: asaniczka/1-3m-linkedin-jobs-and-skills-2024 (its own entry above), scrapifier/indeed-usa-job-postings (description, skills) and arnabk123/data-science-data-analyst-and-ml-jobs-from-indeed; all three are on the cluster. USE LIMIT, decided by Bear in chat on 2026-11-23 (decision 3, option b): aggregate counts only, never quoting posting text. The archive also holds Glassdoor scrapes (scrapifier/glassdoor-*, reviews, salaries and interviews, not on the allow-list); the decision named only LinkedIn and Indeed, so it does not cover them."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: web_data_commons_jobposting
+  name: "Web Data Commons schema.org JobPosting extraction"
+  group: E
+  status: partial
+  source_url: "http://webdatacommons.org/structureddata/ (per SOURCE.md on the cluster)"
+  license: "see SOURCE.md on the cluster (not re-checked in this pass)"
+  version: "as fetched 2026-11-11"
+  retrieved_on: "2026-11-11"
+  local_path: "explorer:/projects/aiskunks/jobs/academic-jobs/data-sets/ (14 parts, 4.96 GB)"
+  occupation_code_system: "none"
+  unit_of_analysis: "listing"
+  coverage: "web-wide schema.org JobPosting markup; not filtered to any occupation"
+  used_for: [RQ2]
+  notes: "Fetched for the academic-jobs project. A possible broad, non-ATS source; its fields were not inspected for this inventory."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: usajobs_api
+  name: "USAJOBS Search API"
+  group: E
+  status: needs_human
+  source_url: "https://developer.usajobs.gov/ (key request: https://developer.usajobs.gov/apirequest/; terms: https://developer.usajobs.gov/guides/terms-of-service)"
+  license: "US government; API terms of service"
+  version: "live API"
+  retrieved_on: ""
+  local_path: "not found"
+  occupation_code_system: "OPM occupational series (needs a crosswalk to SOC)"
+  unit_of_analysis: "listing"
+  coverage: "federal postings"
+  used_for: [RQ2]
+  notes: "Needs an API key a person registers for (name, email, phone, organisation, intended use). Not registered."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: lightcast_postings
+  name: "Lightcast job postings"
+  group: E
+  status: needs_human
+  source_url: "https://lightcast.io/resources/academic-research"
+  license: "commercial licence (an AWS Marketplace listing is US$90,200 for 12 months)"
+  version: ""
+  retrieved_on: ""
+  local_path: "not found"
+  occupation_code_system: "SOC and O*NET-SOC (vendor)"
+  unit_of_analysis: "listing"
+  coverage: ""
+  used_for: [RQ2, RQ3, RQ4]
+  notes: "A licensing decision. Not attempted."
+  signed_off_by: ""
+  signed_off_on: ""
+
+# ─────────────────────────────── F. Course materials ───────────────────────────────
+
+- dataset_id: seis_fall_2026_syllabi
+  name: "SEIS Fall 2026 AI-portfolio syllabi (22 PDFs; 12 confirmed to their section)"
+  group: F
+  status: partial
+  source_url: "http://newton.neu.edu:8080/fall2026/ (department archive); repo https://github.com/nikbearbrown/seis-syllabi (private)"
+  license: "instructors' documents from a public department archive; not for republication"
+  version: "Fall 2026; repo checked 2026-11-20; files byte-identical to Newton on 2026-11-22"
+  retrieved_on: "2026-11-22 (clone)"
+  local_path: "/Users/bear/Documents/CoWork/seis-syllabi/syllabi/fall-2026/; verification report /Users/bear/Documents/CoWork/seis-fall-2026-syllabi-check/fall-2026-syllabi-verification.md"
+  occupation_code_system: "n/a"
+  unit_of_analysis: "course"
+  coverage: "29 sections: 12 confirmed PDFs, 10 with metadata problems, 2 link only, 5 missing"
+  used_for: [RQ4, RQ5]
+  notes: "Syllabi only, with no graded work for these courses, so they are a weaker signal than assignments. 3 syllabi are machine-coded for facets (units by evidence level and AI role) in /Users/bear/Documents/CoWork/irreducibly-human-facets/syllabi-pilot (machine labels, rule 6)."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: course_info7375_prompt_engineering
+  name: "INFO 7375 Prompt Engineering for Generative AI (Bear's course repo)"
+  group: F
+  status: have
+  source_url: "https://github.com/nikbearbrown/info-7375-prompt-engineering-for-generative-ai"
+  license: "not checked in this pass"
+  version: "local checkout"
+  retrieved_on: "local working copy"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-prompt-engineering-for-generative-ai/"
+  occupation_code_system: "n/a"
+  unit_of_analysis: "course, assignment"
+  coverage: "135 files named assignment, rubric, exam, quiz or project; 2 syllabus files"
+  used_for: [RQ4, RQ5]
+  notes: "AI treatment from the syllabus text (machine-read, not coded per assignment): engaged. The syllabus says every exercise assumes an active Claude Code account, and links prerequisites/ai-policy.md. Assignment-level coding: not done."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: course_info7375_computational_skepticism
+  name: "INFO 7375 Computational Skepticism for AI (Bear's course repo)"
+  group: F
+  status: have
+  source_url: "https://github.com/nikbearbrown/info-7375-computational-skepticism-for-ai"
+  license: "not checked in this pass"
+  version: "local checkout"
+  retrieved_on: "local working copy"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-computational-skepticism-for-ai/"
+  occupation_code_system: "n/a"
+  unit_of_analysis: "course, assignment"
+  coverage: "55 graded-work files; 1 syllabus"
+  used_for: [RQ4, RQ5]
+  notes: "AI treatment from the syllabus text: engaged with limits. 'Claude may help compute, write, and critique; it may not invent your history...'. Assignment-level coding: not done."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: course_info7375_branding_and_ai
+  name: "INFO 7375 Branding and AI (Bear's course repo)"
+  group: F
+  status: have
+  source_url: "https://github.com/nikbearbrown/info-7375-branding-and-ai-fall-2026"
+  license: "not checked in this pass"
+  version: "local checkout"
+  retrieved_on: "local working copy"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-branding-and-ai/"
+  occupation_code_system: "n/a"
+  unit_of_analysis: "course, assignment"
+  coverage: "24 graded-work files; 3 syllabus files"
+  used_for: [RQ4, RQ5]
+  notes: "AI treatment from the syllabus text: engaged (it has an 'Access and AI policy' section and assumes Claude Code). Assignment-level coding: not done."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: course_info7375_conducting_ai
+  name: "INFO 7375 Conducting AI (Bear's course repo)"
+  group: F
+  status: have
+  source_url: "https://github.com/nikbearbrown/conducting-ai"
+  license: "not checked in this pass"
+  version: "local checkout"
+  retrieved_on: "local working copy"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/"
+  occupation_code_system: "n/a"
+  unit_of_analysis: "course, assignment"
+  coverage: "19 graded-work files; 1 syllabus"
+  used_for: [RQ4, RQ5]
+  notes: "AI treatment from the syllabus text: engaged ('Preparation and AI policy'; Claude Code assumed). Assignment-level coding: not done."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: course_info7375_irreducibly_human
+  name: "INFO 7375 Irreducibly Human (Bear's course repo)"
+  group: F
+  status: have
+  source_url: "https://github.com/nikbearbrown/info-7375-irreducibly-human"
+  license: "not checked in this pass"
+  version: "local checkout"
+  retrieved_on: "local working copy"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-irreducibly-human/"
+  occupation_code_system: "n/a"
+  unit_of_analysis: "course, assignment"
+  coverage: "14 graded-work files; 1 syllabus"
+  used_for: [RQ4, RQ5]
+  notes: "AI treatment from the syllabus text: engaged (Claude Code assumed). Assignment-level coding: not done."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: course_csye7270
+  name: "CSYE 7270 Building Virtual Environments (Bear's course repo)"
+  group: F
+  status: have
+  source_url: "https://github.com/nikbearbrown/csye-7270-building-virtual-environments"
+  license: "not checked in this pass"
+  version: "local checkout"
+  retrieved_on: "local working copy"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/csye-7270-building-virtual-environments/"
+  occupation_code_system: "n/a"
+  unit_of_analysis: "course, assignment"
+  coverage: "54 graded-work files; 3 syllabus files"
+  used_for: [RQ4, RQ5]
+  notes: "AI treatment: unspecified. No AI-policy line was found in the one syllabus file read (pantry/reports/syllabus-fall-2026-qa.md); the other two weren't read."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: course_info6205_algorithms
+  name: "INFO 6205 Program Structure and Algorithms (Bear's course repo)"
+  group: F
+  status: have
+  source_url: "https://github.com/nikbearbrown/Coursera_INFO_6205_Algorithms"
+  license: "not checked in this pass"
+  version: "local checkout"
+  retrieved_on: "local working copy"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/info-6205-algorithms/"
+  occupation_code_system: "n/a"
+  unit_of_analysis: "course, assignment"
+  coverage: "39 graded-work files; 1 syllabus"
+  used_for: [RQ4, RQ5]
+  notes: "AI treatment from the syllabus text: delegated with limits. 'Claude may explain, suggest tests, and help debug after an initial attempt.' Assignment-level coding: not done."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: course_design_engineering
+  name: "Design Engineering / Digital Experience Engineering (local course folder)"
+  group: F
+  status: partial
+  source_url: "not found (no git remote)"
+  license: "not checked"
+  version: "local working copy"
+  retrieved_on: "local working copy"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/design-engineering/ (info-7375-design-engineering has no graded files)"
+  occupation_code_system: "n/a"
+  unit_of_analysis: "course, assignment"
+  coverage: "10 graded-work files; 2 syllabus files (including pantry/source-syllabus.md)"
+  used_for: [RQ4, RQ5]
+  notes: "AI treatment from the syllabus text: engaged with gates. 'Label AI judgments as AI-made. AI-generated critiques are advisory and cannot pass a gate on their own.' Job-role titles for this course: design-engineering/jobs/roles/."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: neu_course_catalog
+  name: "Northeastern course catalog descriptions (INFO, CSYE, DAMG)"
+  group: F
+  status: missing
+  source_url: "https://catalog.northeastern.edu/course-descriptions/info/ ; .../csye/ ; .../damg/"
+  license: "university web content; terms not checked"
+  version: "2026–2027 catalog (per registrar page; not seen on the description pages)"
+  retrieved_on: ""
+  local_path: "not found"
+  occupation_code_system: "n/a"
+  unit_of_analysis: "course"
+  coverage: ""
+  used_for: [RQ4]
+  notes: "catalog.northeastern.edu refused connections from this machine on 2026-11-22. Catalog descriptions are the weak signal; graded work is the primary one."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: mit_ocw_problem_sets
+  name: "MIT OpenCourseWare problem sets (external comparison set)"
+  group: F
+  status: missing
+  source_url: "https://ocw.mit.edu/"
+  license: "CC BY-NC-SA 4.0 (verified at https://ocw.mit.edu/pages/privacy-and-terms-of-use/)"
+  version: ""
+  retrieved_on: ""
+  local_path: "not found"
+  occupation_code_system: "n/a"
+  unit_of_analysis: "course, assignment"
+  coverage: ""
+  used_for: [RQ4, RQ5]
+  notes: "The NonCommercial term limits use in any commercial version of the tool. Which courses to take is a human decision."
+  signed_off_by: ""
+  signed_off_on: ""
+
+# ─────────────────────────────── G. Work lexicon ───────────────────────────────
+
+- dataset_id: irreducibly_human_work_lexicon
+  name: "Irreducibly Human Work Lexicon (formerly Skills Lexicon)"
+  group: G
+  status: partial
+  source_url: "https://github.com/nikbearbrown/irreducibly-human-work-lexicon (renamed 2026-11-22 from nikbearbrown/skills-lexicon, which redirects)"
+  license: "MIT, Humanitarians AI Incorporated"
+  version: "origin/main 0ba8e0c2 (2026-11-21). The local main checkout is on branch data/wikipedia-match-20261001 (f632e148, 3,688 entries)."
+  retrieved_on: "2026-11-22 (read from origin/main through git archive; nothing changed)"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/irreducibly-human-work-lexicon/ (plus -onet, -replication and -runs worktrees and folders); cluster work at explorer:/projects/aiskunks/skills-lexicon-work/"
+  occupation_code_system: "n/a (concept vocabulary); abilities keyed to O*NET"
+  unit_of_analysis: "concept"
+  coverage: "3,754 entries on main. Kinds: skill 723, knowledge 550, tool 498, platform 219, method 219, library 129, programming-language 112, framework 85, ability 67, credential 859, human-language 158, standard 115, other 20. Status: machine-drafted 3,555, proposed 199, reviewed 0. Relations: related 350, broader 79, part_of 9, contrast 5 (400 entries, about 11%, have one or more relations). 310 entries have verbs."
+  used_for: [RQ2, RQ3, RQ4]
+  notes: "Work phases are not in the lexicon. Draft phase tags for 47,118 posting skill phrases live in /Users/bear/Documents/CoWork/bear-textbooks/books/a-new-shape-for-work/tags/skill-phrase-phase-tags.tsv (rule-made, unreviewed). The lexicon matched only 8–33% of posting skill mentions in the job-shape prototype. No entry is reviewed by a person, so none should feed published counts (the lexicon's own rule)."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_abilities_facet_crosswalk
+  name: "O*NET abilities-to-facets crosswalk (the brief's draft, onet-abilities-facet-crosswalk.md, was not found; rebuilt 2026-11-23 as a machine draft)"
+  group: G
+  status: partial
+  source_url: "derived from O*NET 31.0 Content Model Reference.txt (explorer:/projects/aiskunks/onet/31.0/db_31_0_text/, sha256 f7105e22c282736566a2d4e31859b688a5781d309c1569a0b06aea15b4fcd86e)"
+  license: "Ability names and descriptions: CC BY 4.0 (O*NET 31.0, USDOL/ETA; attribution text in the README). Facet labels: the project's own; licence not set yet (decision 13)."
+  version: "machine draft 2026-11-23: two blind runs of claude-opus-5-5 (Claude Code subagents), run A first-to-last row, run B last-to-first. Not signed off."
+  retrieved_on: "2026-11-23 (built)"
+  local_path: "/Users/bear/Documents/CoWork/the-human-share/data/machine-labels/onet-abilities-facet-crosswalk/ (abilities.tsv, instructions.md, run-a.tsv, run-b.tsv, comparison.tsv, README.md). Blank human coding sheet: /Users/bear/Documents/CoWork/the-human-share/data/gold/onet-abilities-facet-crosswalk/review-sheet.tsv. The original draft: not found (searched the Mac by name and by ability names in the facets, lexicon and Irreducibly-Human folders, the cluster to 5 levels, and Google Drive)."
+  occupation_code_system: "n/a"
+  unit_of_analysis: "descriptor (O*NET ability)"
+  coverage: "52 of 52 O*NET 31.0 abilities, both runs complete. Agreement on the primary facet 50/52, Cohen's kappa 0.930. Pattern & Association or Embodied & Sensorimotor as primary: run A 46, run B 45 (43 and 41 leaving out weak fits). No ability, primary or secondary, in Social & Personal, Collective & Distributed or Existential & Wisdom in either run. No fit in both runs: Deductive Reasoning, Number Facility, Selective Attention, Time Sharing."
+  used_for: [RQ1]
+  notes: "Decision 5 answered by Bear in chat on 2026-11-23: 'Rebuild it'. This is a new machine label under rule 6, not Bear's lost draft. The runs saw only the facet definitions and the O*NET descriptions, not the brief's claim. It can't stand as ground truth until a person codes the blank sheet (blind to the machine labels is best) and signs off. Weak fits (Oral and Written Comprehension, Information Ordering) show that Pattern & Association partly works as a default for cognitive abilities. Decision 6 (Bear, 2026-11-23): fellows or TAs code the human side. A two-coder blind packet (CODEBOOK.md, coder-01.tsv, coder-02.tsv) is ready in the gold folder; no coder is named yet."
+  signed_off_by: ""
+  signed_off_on: ""
+
+# ─────────────────────────────── H. Crosswalks ───────────────────────────────
+
+- dataset_id: onet_soc_2010_to_2019
+  name: "O*NET-SOC 2010 to O*NET-SOC 2019 crosswalk"
+  group: H
+  status: have
+  source_url: "https://www.onetcenter.org/taxonomy/2019/walk/2010_to_2019_Crosswalk.csv?fmt=csv"
+  license: "CC BY 4.0 (O*NET)"
+  version: "taxonomy 2019 (generated on request; the page shows 1,164 occupations)"
+  retrieved_on: "2026-11-23"
+  local_path: "/Users/bear/Documents/CoWork/the-human-share/data/raw/onet-soc-2010-to-2019-crosswalk/2026-11-23/2010_to_2019_Crosswalk.csv (sha256 8f026a33134bfde5770308d1c6117cf70d9dd41c2b3467e6dd271d65bdeecc5a; SOURCE.txt; gitignored)"
+  occupation_code_system: "O*NET-SOC 2010 to O*NET-SOC 2019"
+  unit_of_analysis: "occupation"
+  coverage: "1,164 rows, matching the page"
+  used_for: [RQ1, RQ5]
+  notes: "Needed for AIOE, Eisfeldt, DAIOE and probably the AEI 2025-09 release. The file is generated when requested (no fixed size)."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: onet_soc_2019_to_soc_2018
+  name: "O*NET-SOC 2019 to SOC 2018 crosswalk"
+  group: H
+  status: have
+  source_url: "https://www.onetcenter.org/taxonomy/2019/soc/2019_to_SOC_Crosswalk.csv?fmt=csv"
+  license: "CC BY 4.0 (O*NET)"
+  version: "taxonomy 2019"
+  retrieved_on: "not recorded (sha256 pinned in the manifest)"
+  local_path: "/Users/bear/Documents/CoWork/jobs-data/reference/onet-to-soc-2018.csv (pinned in jobs-data/reference/manifest.json)"
+  occupation_code_system: "O*NET-SOC 2019 to SOC 2018"
+  unit_of_analysis: "occupation"
+  coverage: "full taxonomy"
+  used_for: [RQ1, RQ2, RQ3, RQ4, RQ5]
+  notes: "The rollup that Phase 3 needs."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: bls_soc_2010_to_2018
+  name: "BLS SOC 2010 to SOC 2018 crosswalk"
+  group: H
+  status: needs_human
+  source_url: "https://www.bls.gov/soc/2018/soc_2010_to_2018_crosswalk.xlsx (note: https://www.bls.gov/soc/2018/soc_note_2010_to_2018_crosswalk.pdf)"
+  license: "US government work (public domain)"
+  version: "page last modified 2017-12-06 (verified at source)"
+  retrieved_on: ""
+  local_path: "not found (the Explorer import script hard-codes only two code changes: 15-1131 to 15-1251, and 15-1132 plus 15-1133 to 15-1252)"
+  occupation_code_system: "SOC 2010 to SOC 2018"
+  unit_of_analysis: "occupation"
+  coverage: ""
+  used_for: [RQ1]
+  notes: "bls.gov blocks scripted downloads, so a person must fetch it in a browser."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: bls_nem_onet_to_soc
+  name: "BLS National Employment Matrix, O*NET-SOC to SOC crosswalk"
+  group: H
+  status: partial
+  source_url: "https://www.bls.gov/emp/documentation/crosswalks.htm (nem-onet-to-soc-crosswalk.xlsx)"
+  license: "US government work (public domain)"
+  version: "current page last modified 2026-08-27; the local copy is the older one bundled with GPTs-are-GPTs (vintage not stated)"
+  retrieved_on: "about 2026-10-10 (with the GPTs-are-GPTs copy)"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/openai/GPTs-are-GPTs/data/nem-onet-to-soc-crosswalk.xlsx"
+  occupation_code_system: "O*NET-SOC to SOC 2018 (NEM)"
+  unit_of_analysis: "occupation"
+  coverage: ""
+  used_for: [RQ1]
+  notes: "The ai-exposure repo's notes call this the shared key for exposure measures. The current version needs a browser download."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: bls_soc_2018_structure_and_titles
+  name: "BLS SOC 2018 structure and direct-match title file"
+  group: H
+  status: have
+  source_url: "https://www.bls.gov/soc/2018/soc_structure_2018.xlsx ; https://www.bls.gov/soc/2018/soc_2018_direct_match_title_file.xlsx"
+  license: "US government work (public domain)"
+  version: "SOC 2018"
+  retrieved_on: "not recorded (sha256 pinned)"
+  local_path: "/Users/bear/Documents/CoWork/jobs-data/reference/bls-structure-2018.xlsx and bls-direct-match-2018.xlsx"
+  occupation_code_system: "SOC 2018"
+  unit_of_analysis: "occupation, title"
+  coverage: "459 broad groups, 867 detailed occupations (per jobs-data README)"
+  used_for: [RQ2]
+  notes: ""
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: title_to_occupation_maps
+  name: "Job-title to occupation maps (draft, machine and rule made)"
+  group: H
+  status: partial
+  source_url: "built from O*NET Job Titles, Sample of Reported Titles and Alternate Titles, plus BLS direct-match titles"
+  license: "derived; the sources are CC BY 4.0 and public domain"
+  version: "2026-11-21"
+  retrieved_on: "n/a (derived)"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/a-new-shape-for-work/data/title-map.tsv and tags/title-decisions.tsv; /Users/bear/Documents/CoWork/bear-textbooks/books/jobs/job-title-dataset-2026-11-21/soc-crosswalk/job-title-soc-2018.csv; /Users/bear/Documents/CoWork/jobs-data/data/soc-search-index.json"
+  occupation_code_system: "O*NET-SOC 2019 and SOC 2018"
+  unit_of_analysis: "title"
+  coverage: "LinkedIn 2024: 35% of US postings assigned, 19% ambiguous, 45% unmatched"
+  used_for: [RQ2, RQ4]
+  notes: "Unreviewed. The coverage gap is the main limit on any posting-to-occupation join."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: isco08_onet_crosswalk_kaggle
+  name: "ISCO-08 and O*NET occupation crosswalk (Kaggle, vedatturkkal)"
+  group: H
+  status: partial
+  source_url: "https://www.kaggle.com/datasets/vedatturkkal/isco-08-and-onet-occupation-crosswalk-dataset"
+  license: "not checked in this pass"
+  version: "as downloaded"
+  retrieved_on: "not recorded"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/jobs/kaggle-data/vedatturkkal/isco-08-and-onet-occupation-crosswalk-dataset/"
+  occupation_code_system: "ISCO-08 to O*NET-SOC"
+  unit_of_analysis: "occupation"
+  coverage: ""
+  used_for: [RQ1]
+  notes: "Only needed if DAIOE (ISCO) or the ILO index is used. Prefer the official BLS ISCO-SOC file: https://www.bls.gov/soc/isco_soc_crosswalk.xls"
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: yale_documented_crosswalks
+  name: "Crosswalks documented by the Yale Budget Lab file"
+  group: H
+  status: missing
+  source_url: "https://budgetlab.yale.edu/research/ai-exposure-what-do-we-know"
+  license: "not stated"
+  version: "2026-02-19"
+  retrieved_on: ""
+  local_path: "not found"
+  occupation_code_system: "SOC 2010 to SOC 2018 (ability-importance weights, for AIOE and Eisfeldt); occ1990dd to 1990 Census to 2018 Census to SOC 2018 (Webb); SOC 2019 collapsed to SOC 2018 (Eloundou)"
+  unit_of_analysis: "occupation"
+  coverage: ""
+  used_for: [RQ1]
+  notes: "Opened 2026-11-23: the file carries only the crosswalked scores (SOC 2018 and CPS codes), with no crosswalk tables. To redo Yale's harmonisation we would need the BLS SOC 2010-to-2018 file (needs_human) and the method on the page."
+  signed_off_by: ""
+  signed_off_on: ""

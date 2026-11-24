@@ -1,0 +1,53 @@
+element_id	ability	category	primary_a	primary_b	agree	fit_a	fit_b	secondary_a	secondary_b
+1.A.1.a.1	Oral Comprehension	Cognitive Abilities	Pattern & Association	Pattern & Association	yes	weak	weak		
+1.A.1.a.2	Written Comprehension	Cognitive Abilities	Pattern & Association	Pattern & Association	yes	weak	weak		
+1.A.1.a.3	Oral Expression	Cognitive Abilities	Pattern & Association	Pattern & Association	yes	partial	partial		
+1.A.1.a.4	Written Expression	Cognitive Abilities	Pattern & Association	Pattern & Association	yes	partial	partial		
+1.A.1.b.1	Fluency of Ideas	Cognitive Abilities	Pattern & Association	Pattern & Association	yes	strong	strong		
+1.A.1.b.2	Originality	Cognitive Abilities	Pattern & Association	Pattern & Association	yes	partial	weak		
+1.A.1.b.3	Problem Sensitivity	Cognitive Abilities	Metacognitive & Supervisory	Metacognitive & Supervisory	yes	strong	strong	Pattern & Association	
+1.A.1.b.4	Deductive Reasoning	Cognitive Abilities	no_fit	no_fit	yes	n/a	n/a		
+1.A.1.b.5	Inductive Reasoning	Cognitive Abilities	Pattern & Association	Pattern & Association	yes	partial	partial	Causal & Counterfactual	
+1.A.1.b.6	Information Ordering	Cognitive Abilities	Pattern & Association	Pattern & Association	yes	weak	weak		
+1.A.1.b.7	Category Flexibility	Cognitive Abilities	Pattern & Association	Pattern & Association	yes	partial	partial		
+1.A.1.c.1	Mathematical Reasoning	Cognitive Abilities	no_fit	Metacognitive & Supervisory	no	n/a	weak		
+1.A.1.c.2	Number Facility	Cognitive Abilities	no_fit	no_fit	yes	n/a	n/a		
+1.A.1.d.1	Memorization	Cognitive Abilities	Pattern & Association	Pattern & Association	yes	partial	partial		
+1.A.1.e.1	Speed of Closure	Cognitive Abilities	Pattern & Association	Pattern & Association	yes	strong	partial		
+1.A.1.e.2	Flexibility of Closure	Cognitive Abilities	Pattern & Association	Pattern & Association	yes	strong	strong		
+1.A.1.e.3	Perceptual Speed	Cognitive Abilities	Pattern & Association	Pattern & Association	yes	strong	strong		
+1.A.1.f.1	Spatial Orientation	Cognitive Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.1.f.2	Visualization	Cognitive Abilities	Embodied & Sensorimotor	Causal & Counterfactual	no	partial	weak	Causal & Counterfactual	
+1.A.1.g.1	Selective Attention	Cognitive Abilities	no_fit	no_fit	yes	n/a	n/a		
+1.A.1.g.2	Time Sharing	Cognitive Abilities	no_fit	no_fit	yes	n/a	n/a		
+1.A.2.a.1	Arm-Hand Steadiness	Psychomotor Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.2.a.2	Manual Dexterity	Psychomotor Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.2.a.3	Finger Dexterity	Psychomotor Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.2.b.1	Control Precision	Psychomotor Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.2.b.2	Multilimb Coordination	Psychomotor Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.2.b.3	Response Orientation	Psychomotor Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.2.b.4	Rate Control	Psychomotor Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong	Pattern & Association	
+1.A.2.c.1	Reaction Time	Psychomotor Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.2.c.2	Wrist-Finger Speed	Psychomotor Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.2.c.3	Speed of Limb Movement	Psychomotor Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.3.a.1	Static Strength	Physical Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	partial		
+1.A.3.a.2	Explosive Strength	Physical Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	partial		
+1.A.3.a.3	Dynamic Strength	Physical Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	partial		
+1.A.3.a.4	Trunk Strength	Physical Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	partial		
+1.A.3.b.1	Stamina	Physical Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	partial		
+1.A.3.c.1	Extent Flexibility	Physical Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.3.c.2	Dynamic Flexibility	Physical Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.3.c.3	Gross Body Coordination	Physical Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.3.c.4	Gross Body Equilibrium	Physical Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.4.a.1	Near Vision	Sensory Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.4.a.2	Far Vision	Sensory Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.4.a.3	Visual Color Discrimination	Sensory Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.4.a.4	Night Vision	Sensory Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.4.a.5	Peripheral Vision	Sensory Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.4.a.6	Depth Perception	Sensory Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.4.a.7	Glare Sensitivity	Sensory Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.4.b.1	Hearing Sensitivity	Sensory Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.4.b.2	Auditory Attention	Sensory Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	partial		
+1.A.4.b.3	Sound Localization	Sensory Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	strong	strong		
+1.A.4.b.4	Speech Recognition	Sensory Abilities	Pattern & Association	Pattern & Association	yes	partial	partial	Embodied & Sensorimotor	Embodied & Sensorimotor
+1.A.4.b.5	Speech Clarity	Sensory Abilities	Embodied & Sensorimotor	Embodied & Sensorimotor	yes	partial	partial		

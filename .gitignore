@@ -1,0 +1,6 @@
+# Raw source files stay out of git: each source's licence governs redistribution, and large files live on the cluster.
+# Provenance (SOURCE.txt, sha256) is recorded in each folder and in data/manifest.yaml.
+data/raw/
+
+# Who each coder ID is stays out of git (no names in the repo).
+data/gold/**/coders-private.tsv
