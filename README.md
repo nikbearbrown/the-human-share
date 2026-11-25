@@ -1,14 +1,35 @@
 # The Human Share
 
-*The Human Share: Measuring What AI-Era Jobs Ask of People, and Whether Courses Teach It.* Part of the Irreducibly Human project.
+**Measuring what AI-era jobs ask of people, and whether courses teach it.** Part of the Irreducibly Human project.
 
-## Executive summary
+[Read the project plan](PROJECT.md) · [How to contribute](CONTRIBUTING.md)
 
-- **What this is:** the data foundation for a research paper and its tool. There is no manuscript yet and nothing has been analysed.
-- **What the paper argues:** O\*NET, and the AI exposure indices built on it, measure only part of what jobs ask of people. Job listings, graded coursework and observed AI-usage data can fill the gap.
-- **Want to help?** Read [CONTRIBUTING.md](CONTRIBUTING.md) for what the paper needs and how credit works.
+## Abstract
 
-## Contents
+*Working abstract. No manuscript exists yet, so this describes what the paper sets out to do. It reports no results.*
+
+Published measures of AI exposure are built on O\*NET's descriptors of occupations. This paper asks how much of what jobs ask of people those descriptors cover. It uses the seven-facet classification of work from the Irreducibly Human project. In a draft crosswalk, 47 of O\*NET's 52 abilities fall into two facets, and four facets have none. We propose to test whether three other sources can fill the gap: job listings, which carry recency and seniority; courses' graded work, which shows what is practised; and observed AI-usage data, which shows how AI is used in tasks. The paper also proposes a teaching principle: by the end of a course, its use of AI should match the job's, and any difference should be declared and justified. The crosswalk is a machine draft that still needs independent human coding.
+
+## Where the draft is
+
+There is no draft yet. The closest document is [PROJECT.md](PROJECT.md), which sets out the argument and the five research questions.
+
+## What needs to be done
+
+- Code the abilities-to-facets crosswalk by hand, with independent coders.
+- Settle the open decisions about which data sources to use ([INVENTORY_REPORT.md](INVENTORY_REPORT.md)).
+- Acquire the remaining sources. Only some have been downloaded.
+- Run the analysis for each research question. Nothing has been analysed.
+- Write the manuscript.
+
+## How to contribute
+
+Read the [contributor guide](CONTRIBUTING.md). It lists each kind of contribution with where to start and what to send, the rules for this repo, how to submit, and how credit and authorship work.
+
+- **A quick contribution:** open an issue about one claim, source or decision. You don't need to review the whole paper.
+- **To become an author:** take on a component of the work, help write the paper, approve the final version and agree to be accountable for it. The guide explains each step.
+
+## What is here
 
 | File | What it is |
 |---|---|
