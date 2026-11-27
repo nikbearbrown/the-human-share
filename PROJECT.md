@@ -11,7 +11,7 @@ The tool has three uses:
 2. Give courses feedback on how well they align with job-market demand.
 3. Compare how a course uses AI with how the job uses AI.
 
-**Current phase: 2 (Acquire), in part.** Phase 1 is done. On 2026-11-23 Bear answered, in chat, decisions 1, 2, 3, 5, 6, 7 and 13 of `INVENTORY_REPORT.md`. Five open sources were downloaded with provenance and checksums. A use limit was set, and O\*NET 31.0 was pinned (both below). The abilities-to-facets crosswalk was rebuilt as a machine draft, and fellows or TAs will code its human gold set (see the report's sign-off log). Everything else in Phase 2 still waits on the open decisions. Nothing is analysed and nothing is scraped. Phase 3 waits for sign-off.
+**Current phase: 2 (Acquire), in part.** Phase 1 is done. From 2026-11-23 to 2026-11-27 Bear answered, in chat, decisions 1, 2, 3, 4, 5, 6, 7, 8, 9, 12 and 13 of `INVENTORY_REPORT.md`. Five open sources were downloaded with provenance and checksums. Two use limits were set (decisions 3 and 12), O\*NET 31.0 was pinned, the course corpus was set and RQ4's phase schema was chosen (all below). The abilities-to-facets crosswalk was rebuilt as a machine draft, and fellows or TAs will code its human gold set (see the report's sign-off log). Everything else in Phase 2 still waits on the open decisions. Nothing is analysed and nothing is scraped. Phase 3 waits for sign-off.
 
 ## The argument
 
@@ -52,7 +52,7 @@ The tool has three uses:
 |---|---|---|
 | 0. Setup | This file. Nothing downloaded. | Done 2026-11-22 |
 | 1. Inventory | Find what exists across repos, the Mac and the Explorer cluster. Record it in `data/manifest.yaml`; write `INVENTORY_REPORT.md`. | Done 2026-11-22 |
-| 2. Acquire | Download only the open datasets a person approves, with provenance and checksums. Anything licensed or needing an account or API key becomes a human action item. | **In part**: decisions 1, 2, 3, 5, 6, 7 and 13 answered 2026-11-23; the rest wait |
+| 2. Acquire | Download only the open datasets a person approves, with provenance and checksums. Anything licensed or needing an account or API key becomes a human action item. | **In part**: decisions 1, 2, 3, 5, 6, 7 and 13 answered 2026-11-23, and 4 and 9 on 2026-11-24; the rest wait |
 | 3. Harmonize | Crosswalk every dataset to O\*NET-SOC 2019 (rolls up to SOC 2018), against O\*NET 31.0 (decision 7); build join tables; report coverage per source and across all sources. | After sign-off |
 
 ## Rules
@@ -74,7 +74,11 @@ These come from Bear's answers to the decisions in `INVENTORY_REPORT.md`. They a
 |---|---|---|
 | 2026-11-23 | 3, option (b) | LinkedIn and Indeed job postings scraped by third parties (the Kaggle sets asaniczka/1-3m-linkedin-jobs-and-skills-2024, scrapifier/indeed-usa-job-postings and arnabk123/data-science-data-analyst-and-ml-jobs-from-indeed) are used for **aggregate counts only, never quoting posting text**. We still never scrape LinkedIn or Indeed ourselves (rule 3). The Glassdoor scrapes in the Kaggle archive are not covered. |
 | 2026-11-23 | 7, option (a) | **O\*NET 31.0 (August 2026) is the project's reference release.** Every descriptor, task and DWA is read from `explorer:/projects/aiskunks/onet/31.0/`. The 30.3 file renames are accepted. Work Styles (rebuilt in 30.1 by an AI-expert hybrid method) is flagged as partly machine-made wherever it is used. 30.2 is used only as a bridge for IDs in sources built on it. If a later O\*NET release appears, the project stays on 31.0 unless a person decides again. |
-| 2026-11-23 | 13 | **The repo is private:** https://github.com/nikbearbrown/the-human-share. Raw downloads (`data/raw/`) and any key from coder IDs to names stay out of git. Large raw data stays on the cluster (rule 7). There is no licence file until a person names the owner. |
+| 2026-11-23, changed 2026-11-27 | 13 | **The repo is public:** https://github.com/nikbearbrown/the-human-share. It was created private on 2026-11-23; GitHub showed it public by 2026-11-27, and Bear chose "Keep it public" that day, in line with the 2026-11-26 rule that paper repos are public. Because every commit is public, rule 7 binds in full: raw downloads (`data/raw/`), licensed or unlicensed third-party data (decisions 3 and 12), any key from coder IDs to names, and personal names stay out of git. Large raw data stays on the cluster. There is no licence file until a person names the owner. |
+| 2026-11-24 | 9, option (b) | **The course corpus is Bear's 8 courses plus the 12 confirmed SEIS Fall 2026 section syllabi**, as listed in `data/course-corpus.tsv`. The list marks the two section pairs that share one syllabus text. MIT OCW is out. SEIS sections whose PDFs are unconfirmed, link-only or missing stay out unless a person decides again. The Northeastern catalog is not covered. |
+| 2026-11-24 | 4, option (a) | **RQ4 uses the six phases of A New Shape for Work** (understand, plan, produce, check, sustain, coordinate), as defined in that repo's `docs/METHOD.md`. Course graded work is tagged in the six. The five phases in RQ4's wording (requirements, design, build, review, deploy) are reporting names only, through `data/phase-schema/five-to-six.tsv`. That map is a draft until signed off. Its one open row, deploy, was set to Sustain by Bear on 2026-11-25; the 104 Install and Operate DWAs tagged Produce therefore report under build. The existing phase tags are RQ4's basis but stay draft until a person codes a sample. |
+| 2026-11-26 | 12, option (a) | **AIOE and DAIOE, which have no licence, are used for research with a citation and are never redistributed.** Cite AIOE as Felten, Raj & Seamans (2021), Strategic Management Journal 42(12):2195–2217, and DAIOE as Engberg et al. (2024), IZA DP 16717, as each source asks. No file from either, and no per-occupation table of their scores, goes into git (public or private) or anything we share; that includes the AIOE z-scores in the Yale workbook. Whether the public tool may show per-occupation scores from either is not decided. DAIOE is not downloaded, and fetching it needs its own yes. |
+| 2026-11-27 | 8, option (a) | **The live AI Exposure Explorer database is left as it is, and the paper states its version gap.** Nobody queries or updates it for this project (rules 3 and 8); the project reads O\*NET from the pinned 31.0 files. The paper says the Explorer runs an O\*NET release earlier than 30.3 (its import reads files that 31.0 no longer has; the exact release is not found) and BLS employment data through 2024, while the paper's analyses use O\*NET 31.0. |
 
 ## Layout
 
@@ -83,11 +87,13 @@ These come from Bear's answers to the decisions in `INVENTORY_REPORT.md`. They a
 | `/Users/bear/Documents/CoWork/the-human-share/PROJECT.md` | This file |
 | `/Users/bear/Documents/CoWork/the-human-share/data/manifest.yaml` | One entry per dataset |
 | `/Users/bear/Documents/CoWork/the-human-share/INVENTORY_REPORT.md` | Status, which RQs can be answered now, decisions needed, and the sign-off log |
+| `/Users/bear/Documents/CoWork/the-human-share/data/course-corpus.tsv` | The course corpus (decision 9): one row per course or SEIS section, with its source, GitHub commit or sha256, and local path |
+| `/Users/bear/Documents/CoWork/the-human-share/data/phase-schema/` | RQ4's phase schema (decision 4): the draft map from the brief's five phases onto the six, with its sources |
 | `/Users/bear/Documents/CoWork/the-human-share/data/raw/` | Small open downloads, one dated folder per source with `SOURCE.txt` (gitignored) |
 | `/Users/bear/Documents/CoWork/the-human-share/data/machine-labels/` | Model-made labels, each with the model name and version, its instructions and its runs (rule 6). First: `onet-abilities-facet-crosswalk/` |
 | `/Users/bear/Documents/CoWork/the-human-share/data/gold/` | Human coding sheets, kept apart from the machine labels. Blank until a person codes them |
 | `/Users/bear/Documents/CoWork/the-human-share/scripts/` | Small scripts that made the derived tables and checks |
-| https://github.com/nikbearbrown/the-human-share | Private GitHub remote (decision 13). Holds everything here except `data/raw/` and coder keys |
+| https://github.com/nikbearbrown/the-human-share | Public GitHub remote (decision 13, public since 2026-11-27 at the latest). Holds everything here except `data/raw/` and coder keys |
 | `explorer:/projects/aiskunks/the-human-share/` | Large raw files (`raw/`), Slurm fetch scripts and logs (`fetch-logs-<date>/`), `README.txt` |
 
 Note on naming: the brief says "Discovery cluster". Northeastern's current cluster is **Explorer**, and the project's storage is there (`/projects/aiskunks`). The brief's `nikbearbrown/skills-lexicon` was renamed `nikbearbrown/irreducibly-human-work-lexicon` on 2026-11-22; the old URL redirects.

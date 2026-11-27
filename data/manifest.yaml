@@ -130,7 +130,7 @@
   unit_of_analysis: "IWA"
   coverage: "332 rows (verified at source)"
   used_for: [RQ1, RQ3, RQ4]
-  notes: "Draft phase tags (machine and rule made, unreviewed) exist for all 332 IWAs: /Users/bear/Documents/CoWork/bear-textbooks/books/a-new-shape-for-work/tags/iwa-phase-tags.tsv"
+  notes: "Draft phase tags (machine and rule made, unreviewed) exist for all 332 IWAs: /Users/bear/Documents/CoWork/bear-textbooks/books/a-new-shape-for-work/tags/iwa-phase-tags.tsv. Under decision 4 (2026-11-24) these six-phase tags are RQ4's phase basis. They are still draft, not gold. The map from the brief's five phases is /Users/bear/Documents/CoWork/the-human-share/data/phase-schema/five-to-six.tsv."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -147,7 +147,7 @@
   unit_of_analysis: "DWA"
   coverage: "2,087 rows (verified at source)"
   used_for: [RQ1, RQ3, RQ4]
-  notes: "Draft phase tags for all 2,087 DWAs (unreviewed): a-new-shape-for-work/tags/dwa-phase-tags.tsv. On a 175-DWA pilot, Claude agreed with the rule draft on 73% (kappa 0.66)."
+  notes: "Draft phase tags for all 2,087 DWAs (unreviewed): a-new-shape-for-work/tags/dwa-phase-tags.tsv. On a 175-DWA pilot, Claude agreed with the rule draft on 73% (kappa 0.66). Under decision 4 (2026-11-24) these six-phase tags are RQ4's phase basis. They are still draft, not gold. The map from the brief's five phases is /Users/bear/Documents/CoWork/the-human-share/data/phase-schema/five-to-six.tsv."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -290,17 +290,17 @@
 - dataset_id: explorer_neon_onet_bls
   name: "AI Exposure Explorer database (O*NET tables plus BLS employment)"
   group: A
-  status: needs_human
+  status: missing
   source_url: "https://www.irreducibly.xyz/onet"
   license: "O*NET CC BY 4.0; BLS public domain"
-  version: "not found. The import script reads 'Skills.xlsx', 'Technology Skills.xlsx' and 'Work Values.xlsx', which no longer exist in 31.0, so the load predates 30.3."
+  version: "not found. The import script reads 'Skills.xlsx', 'Technology Skills.xlsx' and 'Work Values.xlsx', which no longer exist in 31.0, so the load predates 30.3. The script was committed 2026-08-10 (380b4a9), after 30.3 came out, so the load used 30.2 or an earlier release. No release number is recorded anywhere in the Explorer repo (searched 2026-11-27)."
   retrieved_on: "not found"
   local_path: "Neon Postgres (13 onet_* tables, bls_employment). Code: /Users/bear/Documents/CoWork/bear-textbooks/books/Irreducibly-Human/scripts/import-onet.mjs and import-bls.mjs. The raw-file folders (ONET_DIR, BLS_DIR) were not found on this Mac."
   occupation_code_system: "O*NET-SOC (full code) plus SOC suffix bridge to BLS"
   unit_of_analysis: "occupation"
   coverage: "BLS OEWS national 1999–2024, with 2009 missing (per the import script)"
   used_for: [RQ1]
-  notes: "I didn't query the database: that needs credentials I wasn't given (rule 3). The Explorer's production code is not to be touched (rule 8). The release in the database can be confirmed by someone who holds the connection string."
+  notes: "I didn't query the database: that needs credentials I wasn't given (rule 3). The Explorer's production code is not to be touched (rule 8). The release in the database can be confirmed by someone who holds the connection string. Decision 8 (2026-11-27, 'Note the gap'): the database is left as it is, and nobody queries it for this project. The project reads O*NET from the pinned 31.0 files (decision 7), not from this database, so status moved from needs_human to missing: not held and not needed. The paper states the gap: the live AI Exposure Explorer runs an O*NET release earlier than 30.3 (exact release not found) and BLS employment data through 2024, while the paper's analyses use O*NET 31.0."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -398,15 +398,15 @@
   group: C
   status: have
   source_url: "https://github.com/AIOE-Data/AIOE"
-  license: "none (no LICENSE file; GitHub reports license null; the README asks for a citation of SMJ 42(12):2195–2217)"
-  version: "repo commit adca5fc, 2024-06-03 (same as upstream, verified 2026-11-22); last data upload 2023-05-03"
+  license: "none (no LICENSE file; GitHub reports license null, rechecked 2026-11-26; the README asks for a citation of Felten, Raj & Seamans (2021), Strategic Management Journal 42(12):2195–2217). USE LIMIT (decision 12, 2026-11-26): research use with that citation; never redistributed."
+  version: "repo commit adca5fc, 2024-06-03 (same as upstream, verified 2026-11-22 and 2026-11-26); last data upload 2023-05-03"
   retrieved_on: "2026-08-10 (clone date)"
-  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-irreducibly-human/AIOE/ (git clone); another copy of the appendix in /Users/bear/Documents/Codex/2026-10-24/task/explorer-audit/"
+  local_path: "/Users/bear/Documents/Codex/2026-10-24/task/explorer-audit/AIOE_DataAppendix.xlsx (the appendix only). The git clone seen on 2026-11-22 at /Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-irreducibly-human/AIOE/ was not found on 2026-11-24; the upstream repo is public."
   occupation_code_system: "six-digit SOC; vintage not stated by the repo (Yale says SOC 2010)"
   unit_of_analysis: "occupation (also industry, county, and an ability-level appendix)"
   coverage: "Appendix A: 774 data rows (sheet A1:C775)"
   used_for: [RQ1]
-  notes: "Built on O*NET abilities, so it is the clearest case of RQ1's inherited blind spot. Without a licence, redistribution needs a human decision."
+  notes: "Built on O*NET abilities, so it is the clearest case of RQ1's inherited blind spot. Decision 12 (2026-11-26, 'Cite, don't redistribute'): used for research, cited as the README asks, and never redistributed. No AIOE file or per-occupation AIOE table goes into git (public or private) or into anything we share; results derived from it are reported with the citation. The Yale workbook also holds AIOE z-scores; this record treats those columns under the same limit."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -481,9 +481,9 @@
 - dataset_id: daioe_dynamic_aioe
   name: "Dynamic AIOE (DAIOE), Engberg et al., IZA DP 16717"
   group: C
-  status: needs_human
+  status: missing
   source_url: "https://sites.google.com/view/ai-econlab/ai-exposure-daioe (Google Drive folder 'AI_Unboxed')"
-  license: "none stated"
+  license: "none stated (page rechecked 2026-11-26: no licence or terms of use). USE LIMIT (decision 12, 2026-11-26): research use with the page's suggested citation; never redistributed."
   version: "appendix dated July 2025; coverage 2010 to 2023"
   retrieved_on: ""
   local_path: "not found"
@@ -491,7 +491,7 @@
   unit_of_analysis: "occupation by year"
   coverage: "11 indices (overall, nine subdomains, genAI) plus percentile ranks"
   used_for: [RQ1]
-  notes: "Distributed through Google Drive with no licence stated. A person should decide whether to use it."
+  notes: "Distributed through Google Drive with no licence stated. Decision 12 (2026-11-26, 'Cite, don't redistribute') allows research use with the page's suggested citation: Engberg, Görg, Lodefalk, Javed, Längkvist, Monteiro, Kyvik Nordås, Pulito, Schroeder & Tang (2024), 'AI Unboxed and Jobs: A Novel Measure and Firm-Level Evidence from Three Countries', IZA DP 16717 (the page also links a 2025 version of the paper). Never redistributed: no DAIOE file or per-occupation table goes into git or anything we share. Status moved from needs_human to missing: nothing is downloaded, and the download needs its own yes."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -803,7 +803,7 @@
   unit_of_analysis: "course"
   coverage: "29 sections: 12 confirmed PDFs, 10 with metadata problems, 2 link only, 5 missing"
   used_for: [RQ4, RQ5]
-  notes: "Syllabi only, with no graded work for these courses, so they are a weaker signal than assignments. 3 syllabi are machine-coded for facets (units by evidence level and AI role) in /Users/bear/Documents/CoWork/irreducibly-human-facets/syllabi-pilot (machine labels, rule 6)."
+  notes: "Syllabi only, with no graded work for these courses, so they are a weaker signal than assignments. 3 syllabi are machine-coded for facets (units by evidence level and AI role) in /Users/bear/Documents/CoWork/irreducibly-human-facets/syllabi-pilot (machine labels, rule 6). IN THE CORPUS (decision 9, 2026-11-24): the 12 confirmed section syllabi only, listed with sha256 in /Users/bear/Documents/CoWork/the-human-share/data/course-corpus.tsv. They hold 10 distinct texts: the two CSYE 7374 sections (CRNs 22638 and 24510) and two CSYE 7380 sections (16385 and 16386) differ only in section details, so each pair counts once. One (INFO 7375-05, CRN 16549) is Bear's own Branding and AI, already in the corpus with its graded work. That leaves 9 texts from other instructors, across 7 courses. The 10 PDFs with conflicting metadata, the 2 link-only sections and the 5 missing ones are not in the corpus unless a person decides again."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -820,7 +820,7 @@
   unit_of_analysis: "course, assignment"
   coverage: "135 files named assignment, rubric, exam, quiz or project; 2 syllabus files"
   used_for: [RQ4, RQ5]
-  notes: "AI treatment from the syllabus text (machine-read, not coded per assignment): engaged. The syllabus says every exercise assumes an active Claude Code account, and links prerequisites/ai-policy.md. Assignment-level coding: not done."
+  notes: "AI treatment from the syllabus text (machine-read, not coded per assignment): engaged. The syllabus says every exercise assumes an active Claude Code account, and links prerequisites/ai-policy.md. Assignment-level coding: not done. In the corpus (decision 9, 2026-11-24); its row and GitHub commit are in /Users/bear/Documents/CoWork/the-human-share/data/course-corpus.tsv."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -837,7 +837,7 @@
   unit_of_analysis: "course, assignment"
   coverage: "55 graded-work files; 1 syllabus"
   used_for: [RQ4, RQ5]
-  notes: "AI treatment from the syllabus text: engaged with limits. 'Claude may help compute, write, and critique; it may not invent your history...'. Assignment-level coding: not done."
+  notes: "AI treatment from the syllabus text: engaged with limits. 'Claude may help compute, write, and critique; it may not invent your history...'. Assignment-level coding: not done. In the corpus (decision 9, 2026-11-24); its row and GitHub commit are in /Users/bear/Documents/CoWork/the-human-share/data/course-corpus.tsv."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -849,12 +849,12 @@
   license: "not checked in this pass"
   version: "local checkout"
   retrieved_on: "local working copy"
-  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-branding-and-ai/"
+  local_path: "not found on 2026-11-24 (seen 2026-11-22 at /Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-branding-and-ai/); the GitHub repo is intact"
   occupation_code_system: "n/a"
   unit_of_analysis: "course, assignment"
   coverage: "24 graded-work files; 3 syllabus files"
   used_for: [RQ4, RQ5]
-  notes: "AI treatment from the syllabus text: engaged (it has an 'Access and AI policy' section and assumes Claude Code). Assignment-level coding: not done."
+  notes: "AI treatment from the syllabus text: engaged (it has an 'Access and AI policy' section and assumes Claude Code). Assignment-level coding: not done. In the corpus (decision 9, 2026-11-24); its row and GitHub commit are in /Users/bear/Documents/CoWork/the-human-share/data/course-corpus.tsv."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -866,12 +866,12 @@
   license: "not checked in this pass"
   version: "local checkout"
   retrieved_on: "local working copy"
-  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/"
+  local_path: "not found on 2026-11-24 (seen 2026-11-22 at /Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-conducting-ai/); the GitHub repo is intact"
   occupation_code_system: "n/a"
   unit_of_analysis: "course, assignment"
   coverage: "19 graded-work files; 1 syllabus"
   used_for: [RQ4, RQ5]
-  notes: "AI treatment from the syllabus text: engaged ('Preparation and AI policy'; Claude Code assumed). Assignment-level coding: not done."
+  notes: "AI treatment from the syllabus text: engaged ('Preparation and AI policy'; Claude Code assumed). Assignment-level coding: not done. In the corpus (decision 9, 2026-11-24); its row and GitHub commit are in /Users/bear/Documents/CoWork/the-human-share/data/course-corpus.tsv."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -883,12 +883,12 @@
   license: "not checked in this pass"
   version: "local checkout"
   retrieved_on: "local working copy"
-  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-irreducibly-human/"
+  local_path: "not found on 2026-11-24 (seen 2026-11-22 at /Users/bear/Documents/CoWork/bear-textbooks/books/info-7375-irreducibly-human/); the GitHub repo is intact"
   occupation_code_system: "n/a"
   unit_of_analysis: "course, assignment"
   coverage: "14 graded-work files; 1 syllabus"
   used_for: [RQ4, RQ5]
-  notes: "AI treatment from the syllabus text: engaged (Claude Code assumed). Assignment-level coding: not done."
+  notes: "AI treatment from the syllabus text: engaged (Claude Code assumed). Assignment-level coding: not done. In the corpus (decision 9, 2026-11-24); its row and GitHub commit are in /Users/bear/Documents/CoWork/the-human-share/data/course-corpus.tsv."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -905,7 +905,7 @@
   unit_of_analysis: "course, assignment"
   coverage: "54 graded-work files; 3 syllabus files"
   used_for: [RQ4, RQ5]
-  notes: "AI treatment: unspecified. No AI-policy line was found in the one syllabus file read (pantry/reports/syllabus-fall-2026-qa.md); the other two weren't read."
+  notes: "AI treatment: unspecified. No AI-policy line was found in the one syllabus file read (pantry/reports/syllabus-fall-2026-qa.md); the other two weren't read. In the corpus (decision 9, 2026-11-24); its row and GitHub commit are in /Users/bear/Documents/CoWork/the-human-share/data/course-corpus.tsv."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -917,12 +917,12 @@
   license: "not checked in this pass"
   version: "local checkout"
   retrieved_on: "local working copy"
-  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/info-6205-algorithms/"
+  local_path: "/Users/bear/Documents/CoWork/bear-textbooks/books/Coursera_INFO_6205_Algorithms/ (on 2026-11-22 it was at /Users/bear/Documents/CoWork/bear-textbooks/books/info-6205-algorithms/)"
   occupation_code_system: "n/a"
   unit_of_analysis: "course, assignment"
   coverage: "39 graded-work files; 1 syllabus"
   used_for: [RQ4, RQ5]
-  notes: "AI treatment from the syllabus text: delegated with limits. 'Claude may explain, suggest tests, and help debug after an initial attempt.' Assignment-level coding: not done."
+  notes: "AI treatment from the syllabus text: delegated with limits. 'Claude may explain, suggest tests, and help debug after an initial attempt.' Assignment-level coding: not done. In the corpus (decision 9, 2026-11-24); its row and GitHub commit are in /Users/bear/Documents/CoWork/the-human-share/data/course-corpus.tsv."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -939,7 +939,7 @@
   unit_of_analysis: "course, assignment"
   coverage: "10 graded-work files; 2 syllabus files (including pantry/source-syllabus.md)"
   used_for: [RQ4, RQ5]
-  notes: "AI treatment from the syllabus text: engaged with gates. 'Label AI judgments as AI-made. AI-generated critiques are advisory and cannot pass a gate on their own.' Job-role titles for this course: design-engineering/jobs/roles/."
+  notes: "AI treatment from the syllabus text: engaged with gates. 'Label AI judgments as AI-made. AI-generated critiques are advisory and cannot pass a gate on their own.' Job-role titles for this course: design-engineering/jobs/roles/. In the corpus (decision 9, 2026-11-24); its row and GitHub commit are in /Users/bear/Documents/CoWork/the-human-share/data/course-corpus.tsv."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -956,7 +956,7 @@
   unit_of_analysis: "course"
   coverage: ""
   used_for: [RQ4]
-  notes: "catalog.northeastern.edu refused connections from this machine on 2026-11-22. Catalog descriptions are the weak signal; graded work is the primary one."
+  notes: "catalog.northeastern.edu refused connections from this machine on 2026-11-22. Catalog descriptions are the weak signal; graded work is the primary one. Decision 9 (2026-11-24) did not cover the catalog, so fetching it (browser, or a cluster job) needs a separate yes."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -973,7 +973,7 @@
   unit_of_analysis: "course, assignment"
   coverage: ""
   used_for: [RQ4, RQ5]
-  notes: "The NonCommercial term limits use in any commercial version of the tool. Which courses to take is a human decision."
+  notes: "The NonCommercial term limits use in any commercial version of the tool. NOT IN THE CORPUS: on decision 9 (2026-11-24) Bear chose option (b), not (c). Nothing fetched."
   signed_off_by: ""
   signed_off_on: ""
 
@@ -992,7 +992,7 @@
   unit_of_analysis: "concept"
   coverage: "3,754 entries on main. Kinds: skill 723, knowledge 550, tool 498, platform 219, method 219, library 129, programming-language 112, framework 85, ability 67, credential 859, human-language 158, standard 115, other 20. Status: machine-drafted 3,555, proposed 199, reviewed 0. Relations: related 350, broader 79, part_of 9, contrast 5 (400 entries, about 11%, have one or more relations). 310 entries have verbs."
   used_for: [RQ2, RQ3, RQ4]
-  notes: "Work phases are not in the lexicon. Draft phase tags for 47,118 posting skill phrases live in /Users/bear/Documents/CoWork/bear-textbooks/books/a-new-shape-for-work/tags/skill-phrase-phase-tags.tsv (rule-made, unreviewed). The lexicon matched only 8–33% of posting skill mentions in the job-shape prototype. No entry is reviewed by a person, so none should feed published counts (the lexicon's own rule)."
+  notes: "Work phases are not in the lexicon. Draft phase tags for 47,118 posting skill phrases live in /Users/bear/Documents/CoWork/bear-textbooks/books/a-new-shape-for-work/tags/skill-phrase-phase-tags.tsv (rule-made, unreviewed). Under decision 4 (2026-11-24) these six-phase tags are RQ4's phase basis. They are still draft, not gold. The map from the brief's five phases is /Users/bear/Documents/CoWork/the-human-share/data/phase-schema/five-to-six.tsv. The lexicon matched only 8–33% of posting skill mentions in the job-shape prototype. No entry is reviewed by a person, so none should feed published counts (the lexicon's own rule)."
   signed_off_by: ""
   signed_off_on: ""
 

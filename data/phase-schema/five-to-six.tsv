@@ -1,0 +1,7 @@
+brief_phase	six_phase	job_shape_software_name	evidence	status
+requirements	Understand	Specify	The Job Shape brief pairs Understand with Specify. The posting rules send 'requirements' to Understand.	draft
+design	Plan	Design	The same word in the Job Shape table. The posting rules and the DWA verb rules send 'design' to Plan.	draft
+build	Produce	Build	The same word in the Job Shape table. The DWA verbs Build, Code and Program, and the posting terms 'development' and 'coding', go to Produce.	draft
+review	Check	Verify	The Job Shape brief pairs Check with Verify. The DWA verb Review and the posting terms 'code review' and 'peer review' go to Check.	draft
+deploy	Sustain	Operate	The Job Shape brief pairs Sustain with Operate but never names deploy. The posting terms 'ci/cd', 'devops' and 'production support' go to Sustain, but the DWA verbs Install and Operate go to Produce: those 104 DWAs (5 of them about computers or software) report under build, not deploy. No DWA name contains 'deploy'.	chosen by Bear 2026-11-25
+(none)	Coordinate	(cross-cutting)	No counterpart among the brief's five phases.	n/a
