@@ -8,13 +8,13 @@
 
 ## Abstract
 
-*Working abstract. No manuscript exists yet, so this describes what the paper sets out to do. It reports no results.*
+*Working abstract. A rough methods manuscript is available. It reports no study results.*
 
 Published measures of AI exposure are built on O\*NET's descriptors of occupations. This paper asks how much of what jobs ask of people those descriptors cover. It uses the seven-facet classification of work from the Irreducibly Human project. In a draft crosswalk, 47 of O\*NET's 52 abilities fall into two facets, and four facets have none. We propose to test whether three other sources can fill the gap: job listings, which carry recency and seniority; courses' graded work, which shows what is practised; and observed AI-usage data, which shows how AI is used in tasks. The paper also proposes a teaching principle: by the end of a course, its use of AI should match the job's, and any difference should be declared and justified. The crosswalk is a machine draft that still needs independent human coding.
 
 ## Where the draft is
 
-There is no draft yet. The closest document is [PROJECT.md](PROJECT.md), which sets out the argument and the five research questions.
+The [rough methods manuscript and Critique review](critiq-output/) are available. The underlying plan is [PROJECT.md](PROJECT.md), which sets out the argument and the five research questions.
 
 ## What needs to be done
 
@@ -22,7 +22,7 @@ There is no draft yet. The closest document is [PROJECT.md](PROJECT.md), which s
 - Settle the open decisions about which data sources to use ([INVENTORY_REPORT.md](INVENTORY_REPORT.md)).
 - Acquire the remaining sources. Only some have been downloaded.
 - Run the analysis for each research question. Nothing has been analysed.
-- Write the manuscript.
+- Review and revise the rough manuscript.
 
 ## How to contribute
 
