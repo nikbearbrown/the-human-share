@@ -803,7 +803,24 @@
   unit_of_analysis: "course"
   coverage: "29 sections: 12 confirmed PDFs, 10 with metadata problems, 2 link only, 5 missing"
   used_for: [RQ4, RQ5]
-  notes: "Syllabi only, with no graded work for these courses, so they are a weaker signal than assignments. 3 syllabi are machine-coded for facets (units by evidence level and AI role) in /Users/bear/Documents/CoWork/irreducibly-human-facets/syllabi-pilot (machine labels, rule 6). IN THE CORPUS (decision 9, 2026-11-24): the 12 confirmed section syllabi only, listed with sha256 in /Users/bear/Documents/CoWork/the-human-share/data/course-corpus.tsv. They hold 10 distinct texts: the two CSYE 7374 sections (CRNs 22638 and 24510) and two CSYE 7380 sections (16385 and 16386) differ only in section details, so each pair counts once. One (INFO 7375-05, CRN 16549) is Bear's own Branding and AI, already in the corpus with its graded work. That leaves 9 texts from other instructors, across 7 courses. The 10 PDFs with conflicting metadata, the 2 link-only sections and the 5 missing ones are not in the corpus unless a person decides again."
+  notes: "Syllabi only, with no graded work for these courses, so they are a weaker signal than assignments. 3 syllabi are machine-coded for facets (units by evidence level and AI role) in /Users/bear/Documents/CoWork/irreducibly-human-facets/syllabi-pilot (machine labels, rule 6). ORIGINAL CONFIRMED CORE (decision 9, 2026-11-24; expanded inventory documented in seis_newton_syllabus_snapshots): the 12 section syllabi, listed with sha256 in /Users/bear/Documents/CoWork/the-human-share/data/course-corpus.tsv. They hold 10 distinct texts: the two CSYE 7374 sections (CRNs 22638 and 24510) and two CSYE 7380 sections (16385 and 16386) differ only in section details, so each pair counts once. One (INFO 7375-05, CRN 16549) is Bear's own Branding and AI, already in the corpus with its graded work. That leaves 9 texts from other instructors, across 7 courses. The 10 PDFs with conflicting metadata, the 2 link-only sections and the 5 missing ones were not part of that confirmed core; consult the current course-corpus statuses."
+  signed_off_by: ""
+  signed_off_on: ""
+
+- dataset_id: seis_newton_syllabus_snapshots
+  name: "SEIS Newton Fall 2026 and Spring 2027 syllabus coverage"
+  group: F
+  status: partial
+  source_url: "http://newton.northeastern.edu:8080/fall2026/ and http://newton.northeastern.edu:8080/spring2027/"
+  license: "metadata and public source pointers only; no permission to redistribute PDFs assumed"
+  version: "2026-11-23 manifests; 2026-11-27 index and missing-link recheck"
+  retrieved_on: "2026-11-23; coverage checked 2026-11-27"
+  local_path: "data/course-corpus.tsv; data/course-corpus-missing.tsv"
+  occupation_code_system: "n/a"
+  unit_of_analysis: "term and section CRN; deduplicate by text_id after screening"
+  coverage: "Fall 113 PDF-linked CRNs plus 1 previously verified off-index; Spring 44 PDF-linked CRNs; 70 HTTP 404 across both terms"
+  used_for: [RQ4, RQ5]
+  notes: "Decision 9 expansion. Preserve the confirmed core and the separate graded-work stratum. Verify candidates before coding; do not treat missing or held rows as negative evidence. See data/README.md."
   signed_off_by: ""
   signed_off_on: ""
 

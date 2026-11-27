@@ -1,5 +1,7 @@
 # The Human Share: Phase 1 inventory report
 
+**Corpus update, November 27, 2026:** [Fall 2026 and Spring 2027 SEIS coverage](data/README.md) supersedes the old 20-row inventory below. The original evidence levels and IDs are retained. Candidates and held records are not validated syllabus labels.
+
 Inventory taken 2026-11-22; updated 2026-11-27.
 
 **Update 2026-11-23:** Bear approved the small open downloads ("Approve small ones"). Three sources were fetched with checksums: the Yale Budget Lab workbook, Microsoft's working-with-ai data and the O\*NET-SOC 2010-to-2019 crosswalk (see the sign-off log at the end). Later the same day Bear chose "Latest + 2025-03-27" for the Anthropic Economic Index (decision 2). The 2025-03-27 release is on the Mac; the 2026-06-26 release (296 MB) is on the Explorer cluster. Bear then ruled on decision 3: LinkedIn and Indeed data scraped by third parties may be used for aggregate counts only, never quoting text. On decision 5 he said "Rebuild it": the abilities-to-facets crosswalk was rebuilt as a machine draft, from two blind model runs, and a blank human coding sheet sits beside it. Everything else still waits on the decisions below. Nothing has been analysed beyond checking that the files open and that their codes join.

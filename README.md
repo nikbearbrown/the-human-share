@@ -38,6 +38,7 @@ Start with [Getting started](CONTRIBUTING.md#getting-started) in the [contributo
 | [PROJECT.md](PROJECT.md) | The argument, the research questions, the facet definitions and the current phase |
 | [INVENTORY_REPORT.md](INVENTORY_REPORT.md) | The inventory of data sources, with the decisions made and still open |
 | [data/manifest.yaml](data/manifest.yaml) | Every dataset considered, with its provenance and terms |
+| [Fall 2026 and Spring 2027 syllabus corpus](data/course-corpus.tsv) | Section metadata and provenance; see [coverage and coding rules](data/README.md) |
 | [data/gold/](data/gold/) | The hand-coding kit for the O\*NET abilities-to-facets crosswalk |
 | [data/machine-labels/](data/machine-labels/) | The machine-drafted crosswalk and the comparison between its runs |
 | [scripts/](scripts/) | Scripts that extract the abilities and compare label runs |

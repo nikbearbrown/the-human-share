@@ -1,0 +1,71 @@
+term	course	section	crn	title	schedule_group	source_index	snapshot_date	snapshot_http	recheck_date	recheck_http
+Fall 2026	INFO 6215	30	16503	Business Analysis & Info Engr	MSIS Oakland	http://newton.northeastern.edu:8080/fall2026/	2026-11-23	404	2026-11-27	404
+Fall 2026	INFO 7374	06	16540	Machine Learning Med Devices	MSIS San Jose	http://newton.northeastern.edu:8080/fall2026/	2026-11-23	404	2026-11-27	404
+Fall 2026	INFO 7610	02	16562	Topic Nat Lang Engr Meth/Tools	MSIS Seattle	http://newton.northeastern.edu:8080/fall2026/	2026-11-23	404	2026-11-27	404
+Fall 2026	TELE 6530	01	16576	Connected Devices	TELE Boston	http://newton.northeastern.edu:8080/fall2026/	2026-11-23	404	2026-11-27	404
+Fall 2026	INFO 7375	06	20180	ST: High Perf Computing for AI	MSIS Online	http://newton.northeastern.edu:8080/fall2026/	2026-11-23	404	2026-11-27	404
+Fall 2026	INFO 7375	07	20181	ST: Self-improving AI	MSIS Online	http://newton.northeastern.edu:8080/fall2026/	2026-11-23	404	2026-11-27	404
+Fall 2026	INFO 7375	12	24437	ST: High Perf Computing for AI	MSIS San Jose	http://newton.northeastern.edu:8080/fall2026/	2026-11-23	404	2026-11-27	404
+Fall 2026	INFO 7375	20	25295	ST: Arch Enterprise AI Systems	MSIS Portland	http://newton.northeastern.edu:8080/fall2026/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 6200	06	35336	Concpts of Object-Oriented Des	CSYE Arlington	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 6220	01	35339	Enterprise Software Design	CSYE Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 6225	01	35340	Netwrk Strctrs & Cloud Cmpting	CSYE Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 6225	30	35344	Netwrk Strctrs & Cloud Cmpting	CSYE Oakland	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 6230	01	35345	Operating Systems	CSYE Online	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 7105	01	35348	Parallel Machine Learning & AI	CSYE Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 7230	01	35353	Software Engineering	CSYE Online	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 7374	04	35362	Intro AI Agent Infrastructure	CSYE Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 7374	05	35363	Infrastructure & DevOps w/LLMs	CSYE San Jose	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 7380	01	35365	Theory & Prac App AI Gen Model	CSYE Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 7380	06	35369	Theory & Prac App AI Gen Model	CSYE Online	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	DAMG 6105	02	35372	Data Science Eng with Python	DAMG Seattle	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	DAMG 6210	01	35374	Data Mgt and Database Design	DAMG Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	DAMG 6210	06	35379	Data Mgt and Database Design	DAMG Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	DAMG 7245	01	35387	Big Data Sys & Intel Analytics	DAMG Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 5100	01	35409	Application Engineer & Dev	MSIS Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 5100	06	35414	Application Engineer & Dev	MSIS Arlington	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 5100	07	35415	Application Engineer & Dev	MSIS Vancouver	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 5100	09	35417	Application Engineer & Dev	MSIS Miami	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 5100	10	35418	Application Engineer & Dev	MSIS Online	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6105	05	35437	Data Sci Eng Methods	MSIS Seattle	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6105	07	35439	Data Sci Eng Methods	MSIS San Jose	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6105	13	35444	Data Sci Eng Methods	MSIS Vancouver	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6105	30	35445	Data Sci Eng Methods	MSIS Oakland	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6150	03	35449	Web Design/User Experien Engr	MSIS Seattle	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6150	05	35451	Web Design/User Experien Engr	MSIS Toronto	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6150	06	35452	Web Design/User Experien Engr	MSIS Vancouver	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6205	04	35460	Program Structure & Algorithms	MSIS Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6205	09	35465	Program Structure & Algorithms	MSIS San Jose	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6205	10	35466	Program Structure & Algorithms	MSIS Vancouver	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6205	11	35467	Program Structure & Algorithms	MSIS Toronto	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6205	12	35468	Program Structure & Algorithms	MSIS Arlington	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6205	30	35470	Program Structure & Algorithms	MSIS Oakland	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6215	05	35475	Business Analysis & Info Engr	MSIS Vancouver	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6215	06	35476	Business Analysis & Info Engr	MSIS San Jose	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6255	04	35498	Software Quality Contrl & Mgmt	MSIS Arlington	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6350	02	35500	Smartphones-Based Web Devlpmnt	MSIS San Jose	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6500	01	35502	Managing Operational Risk Engr	MSIS Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 7225	01	35503	Account/Budgets for Engineers	MSIS Online	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 7374	03	35512	ST: Adv Techniques With LLM	MSIS San Jose	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 7374	30	35516	ST: Adv Techniques With LLM	MSIS Oakland	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 7375	03	35519	ST: Building AI Applications	MSIS Online	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 7375	07	35522	ST: High Perf Computing for AI	MSIS Online	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 7375	08	35523	ST: Self-improving AI	MSIS Online	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 7385	01	35526	Managerial Comm for Engineers	MSIS Online	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 7410	01	35529	Adv Med Device Software Engr	MSIS Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 6200	07	40001	Concpts of Object-Oriented Des	CSYE Toronto	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	DAMG 6105	05	40004	Data Science Eng with Python	DAMG Toronto	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6215	13	40008	Business Analysis & Info Engr	MSIS Toronto	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6215	14	40009	Business Analysis & Info Engr	MSIS Arlington	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 7375	09	40011	ST: Self-improving AI	MSIS San Jose	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6105	15	42103	Data Sci Eng Methods	MSIS Online	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 7374	07	42114	Infrastructure & DevOps w/LLMs	CSYE Online	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 7380	07	42115	Theory & Prac App AI Gen Model	CSYE Vancouver	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 7375	15	42127	ST: Neural Networks & AI	MSIS San Jose	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 7375	16	42128	ST: System Design in Age of AI	MSIS Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 7390	30	42130	Advances Data Sci/Architecture	MSIS Oakland	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 7230	02	42173	Software Engineering	CSYE Arlington	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	CSYE 7220	02	42560	DevOps	CSYE Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	TELE 6530	01	42569	Connected Devices	TELE Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	TELE 6500	01	42612	Machine Learning for IoT Syst	TELE Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
+Spring 2027	INFO 6376	01	42675	ST: AI Improving AI	MSIS Boston	http://newton.northeastern.edu:8080/spring2027/	2026-11-23	404	2026-11-27	404
